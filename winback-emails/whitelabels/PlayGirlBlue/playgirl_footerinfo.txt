@@ -1,0 +1,16 @@
+
+	<!--
+	<TR><TD align="left" bgcolor="#ffffff"><font face="Tahoma, Helvetica, Arial, sans-serif" size="1" color="#000000">
+		You have received this email because you requested email updates from Playgirl.com or affiliated companies be sent to: %%EMAIL_ADDRESS%%.
+		<br /><br />
+		<b>&copy;2018 Playgirl, All Rights Reserved.</b>
+		<br /><br />
+		18 U.S.C. &sect;2257 Compliant.<br />
+		Custodian of Records, 11 Park Place, New York, NY 10007
+		<br /><br />
+		<b>Please add reply@playgirlblue.com to your safe sender list to ensure our emails are delivered to your inbox.</b>
+		<br /><br />
+		%%PLUGIN_UNSUBSCRIBE: 1317034-Unsubscribe%%
+	<BR><BR>
+	</TD></TR>
+	-->
