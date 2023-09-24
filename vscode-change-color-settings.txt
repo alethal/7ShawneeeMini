@@ -1,0 +1,109 @@
++++++++++++++++++++++++++++++
+
+command + p - open settings.json
+
+I assume you are using the Insiders' Build. You can disable those tab "decorations" with these settings:
+
+Workbench > Editor > Decorations: Colors
+Workbench > Editor > Decorations: Badges
+
+Those would override your tab foreground if you don't disable them.
+
+Then you color your tab colors if you need to.
+
+Go to settings.json and paste
+
+"tab.inactiveForeground": "#000000",
+"tab.activeForeground": "#000000",
+The first one is for the color of the inactive tab name and the second one is for the color of the active tab name.
+
+https://stackoverflow.com/questions/59121072/is-there-a-way-of-making-the-active-tab-border-highlighted-on-top-instead-of-at
+
+ou can visit the Theme Color VS Code web page - https://code.visualstudio.com/api/references/theme-color to get more information on this.
+
+Open your user settings.json (Ctrl + ,)
+
+Two lines below the tab.activeBorder, you will find tab.activeBorderTop, which does exactly what you intended.
+
+"workbench.colorCustomizations": {
+"[Nord]": { // Optional
+"editorLineNumber.foreground": "#7c99b6b0",
+// Render the actual characters on a line as opposed to color blocks.
+"editor.minimap.renderCharacters": true,
+"minimap.background": "#3d536990",
+"minimapSlider.background": "#4985c156",
+"minimapSlider.hoverBackground": "#81bacc7d",
+"minimapSlider.activeBackground": "#c7e3ff81",
+"editorGroupHeader.tabsBackground": "#506073",
+"editorGroupHeader.tabsBorder": "#506073",
+"tab.border": "#506073",
+"tab.activeBackground": "#C7E3FF",
+"tab.activeForeground": "#142536",
+"tab.activeBorder": "#efefef",
+"tab.inactiveBackground": "#3D5369",
+"tab.inactiveForeground": "#b3b3b3",
+"tab.hoverBackground": "#586D82",
+"tab.hoverForeground": "#ffffff",
+"titleBar.activeBackground": "#7FB572",
+"titleBar.activeForeground": "#242D36",
+// "tab.inactiveForeground": "",
+"tab.activeForeground": "#485c15"
+}
+},
+
+P.S. don't forget to put it inside
+
+"workbench.colorCustomizations": {
+"tab.inactiveForeground": "#yourcolor",
+"tab.activeForeground": "#yourcolor",
+}
+
+https://stackoverflow.com/questions/65807608/how-to-stop-vscode-having-colored-tab-names
+
+This is a color picked to identified modified git resource.
+https://github.com/microsoft/vscode/blob/b1ce0eda2dd4980b93e4b552c6573fa0afa9ee32/extensions/git/package.json#L2155
+
+Overwrite it by:
+
+{
+"workbench.colorCustomizations": {
+"gitDecoration.modifiedResourceForeground": "#FF8A80"
+}
+}
+
+And to disable the git decorations overall as the comment suggested
+
+{
+"git.decorations.enabled":false
+}
+
+++++++++++++++++++++++
+
+Minimap
+The Minimap shows a minified version of the current file.
+
+minimap.findMatchHighlight: Highlight color for matches from search within files.
+
+minimap.selectionHighlight: Highlight color for the editor selection.
+
+minimap.errorHighlight: Highlight color for errors within the editor.
+
+minimap.warningHighlight: Highlight color for warnings within the editor.
+
+minimap.background: Minimap background color.
+
+minimap.selectionOccurrenceHighlight: Minimap marker color for repeating editor selections.
+
+minimap.foregroundOpacity: Opacity of foreground elements rendered in the minimap. For example, "#000000c0" will render the elements with 75% opacity.
+
+minimapSlider.background: Minimap slider background color.
+
+minimapSlider.hoverBackground: Minimap slider background color when hovering.
+
+minimapSlider.activeBackground: Minimap slider background color when clicked on.
+
+minimapGutter.addedBackground: Minimap gutter color for added content.
+
+minimapGutter.modifiedBackground: Minimap gutter color for modified content.
+
+minimapGutter.deletedBackground: Minimap gutter color for deleted content.

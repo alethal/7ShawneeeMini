@@ -1,0 +1,438 @@
+<html>
+
+<head>
+    <title>Sorry</title>
+
+
+
+
+    {literal}
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WGG88K');</script>
+    <!-- End Google Tag Manager -->
+
+    {/literal}
+
+
+
+    {literal}
+    <!-- Google Analytics Join.NakedSword - updated rgate code oct28 2020 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-856518-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+        gtag('js', new Date());
+        gtag('config', 'UA-856518-1', {
+            'linker': {
+                'accept_incoming': true,
+                'domains': ['nakedsword.com', 'join.nakedsword.com', 'rocketgate.com']
+            }
+        });
+    </script>
+
+
+
+    {/literal}
+
+
+    {literal}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    {/literal}
+
+
+    <style type="text/css">
+        {
+            literal
+        }
+
+        body {
+            background: #ffffff;
+            color: #FFF;
+            font-family: 'Oswald', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 200;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .join_table {
+            font-size: 1em;
+            color: #ffffff;
+            width: 100%;
+            border: 0px solid #000000;
+            padding: 5px;
+            margin: 0px;
+            max-width: 100%;
+        }
+
+        .join_name {
+            font-weight: bold;
+            text-align: right;
+            border: none;
+            padding: 0em 0 0 0;
+        }
+
+        .join_value {
+            text-align: left;
+            border: none;
+            padding: .5em 0 0 0;
+        }
+
+        .join_error {
+            color: #333333;
+            background-color: #ffcc00;
+            text-transform: uppercase;
+            padding: 5px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .join_header {
+            text-align: center;
+        }
+
+        .join_footer {
+            text-align: center;
+            width: 100%;
+            margin: .5em .5em;
+        }
+
+        .join_input {
+            padding: 4px;
+            font-size: 1em;
+            line-height: 1.25;
+        }
+
+        .join_select {}
+
+        .join_button {}
+
+
+
+        .UpsellPageContain {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: no-wrap;
+            flex-flow: space-between;
+        }
+
+        .PageLeft {
+            width: 15%;
+            display: inline-block;
+        }
+
+        .PageMiddle {
+            width: 70%;
+            display: inline-block;
+            flex-grow: 2;
+        }
+
+        .PageRight {
+            width: 15%;
+            display: inline-block;
+        }
+
+
+        .nslogoheader {
+            height: 100px;
+            position: relative;
+            z-index: 100;
+            background: #112d5d;
+            background: -moz-linear-gradient(left, #112d5d 0%, #112d5d 33%, rgba(17, 45, 93, .5) 55%, rgba(137, 147, 162, .5) 65%, rgba(137, 147, 162, .25) 100%);
+            background: -webkit-linear-gradient(left, #112d5d 0%, #112d5d 33%, rgba(17, 45, 93, .5) 55%, rgba(137, 147, 162, .5) 65%, rgba(137, 147, 162, .25) 100%);
+            background: -webkit-gradient(linear, left top, right top, from(#112d5d), color-stop(57%, #112d5d), to(#ffffff));
+            background: -o-linear-gradient(left, #112d5d 0%, #112d5d 33%, rgba(17, 45, 93, .5) 55%, rgba(137, 147, 162, .5) 65%, rgba(137, 147, 162, .25) 100%);
+            background: linear-gradient(to right, #112d5d 0%, #112d5d 33%, rgba(17, 45, 93, .5) 55%, rgba(137, 147, 162, .5) 65%, rgba(137, 147, 162, .25) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#112d5d', GradientType=1);
+        }
+
+        .logo {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: left;
+            min-height: auto;
+            min-width: 200px;
+            max-width: 410px;
+            padding: 20px 40px 0 40px;
+        }
+
+
+
+        .UpsellImgH {
+            padding: 10px;
+            margin: 10px 20px 10px 10px;
+            width: 98%;
+            display: inline-block;
+        }
+
+
+
+        .join_form_wrapper {
+            display: block;
+            text-align: center;
+            background: #112d5d;
+            width: 100%;
+        }
+
+
+        .AcceptCheck {
+            width: 100%;
+            text-align: right;
+            display: inline-block;
+        }
+
+        .AcceptCheck input {
+            text-align: right;
+            display: inline-block;
+        }
+
+        .AcceptText {
+            width: 100%;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .AcceptText strong {
+            font-size: 1.15em;
+            font-weight: 300;
+        }
+
+        .StepDirections {
+            text-align: center;
+        }
+
+        .EnterEmailLabel {
+            width: 100%;
+            text-align: right;
+            display: block;
+            padding: 0 10px 0 0;
+        }
+
+        .EnterEmailField {
+            width: 100%;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .AdditionalDealInfo {}
+
+        .HDealTitle {
+            display: inline;
+            width: 100%;
+            text-align: left;
+            font-size: 1.25em;
+        }
+
+        .DealInfo {
+            display: inline;
+            width: 100%;
+            text-align: left;
+            font-size: .85em;
+        }
+
+        .StepDirections {
+            padding: 0 0 10px 0;
+        }
+
+        /* join form */
+
+
+
+
+        .join-headers {
+            font-size: 1.5em;
+            text-align: center;
+            border: none;
+            font-weight: 300;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 10px 0 10px 0;
+            margin: 0;
+        }
+
+        .headertop {
+            font-size: 1.65em;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .submit_button_holder {
+            text-align: center;
+            padding: 0 25px 10px 25px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        #nsjoin-button {
+            font-family: 'Oswald', Helvetica, Arial, sans-serif;
+            border: 1px solid #112d5d;
+            box-shadow: 1px 1px 2px #333;
+            text-transform: uppercase;
+            color: #112d5d;
+            font-size: 35px;
+            line-height: 50px;
+            height: 75px;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+            text-align: center;
+            width: 100%;
+            -webkit-appearance: none;
+            border-radius: 13px 13px 13px 13px;
+            -moz-border-radius: 13px 13px 13px 13px;
+            -webkit-border-radius: 13px 13px 13px 13px;
+            background: rgb(248, 216, 112);
+            background: linear-gradient(0deg, rgba(248, 216, 112, 1) 0%, rgba(221, 186, 68, 1) 35%, rgba(255, 223, 119, 1) 100%);
+        }
+
+        ;
+        }
+
+
+        #nsjoin-button:hover {
+            background: rgb(248, 216, 112);
+            background: linear-gradient(180deg, rgba(248, 216, 112, 1) 0%, rgba(221, 186, 68, 1) 35%, rgba(255, 223, 119, 1) 100%);
+        }
+        }
+
+
+        @media screen and (max-width: 769px) {
+
+            .PageLeft,
+            .PageRight {
+                width: 2%;
+            }
+
+            .PageMiddle {
+                width: 96%;
+            }
+
+            .join-header {
+                font-size: 1.15em;
+            }
+
+            .headertop {
+                font-size: 1.15em;
+            }
+        }
+
+
+
+
+            {
+            /literal
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGG88K" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="UpsellPageContain">
+
+        <div class="nslogoheader"><img alt="Logo" src="https://spotlight.nakedcdn.com/ns-logos-svg/NakedSword_white.svg"
+                class="logo"></div>
+
+        <div class="UpsellImgH"><img src="https://assets.nakedsword.com/pictures/banners/1665/77113.jpg" width="100%:"
+                height="auto"></div>
+
+        <div class="PageLeft">
+
+
+            &nbsp;
+
+
+        </div><!-- // PageLeft -->
+
+
+
+
+
+
+
+        <div class="PageMiddle">
+
+            <div class="join_form_wrapper">
+
+                <TABLE border=0 cellpadding=0 cellspacing=0 class="join_table" width="100%">
+                    <TR>
+                        <TD class="join_header" colspan=2>
+                            <div class="join-headers headertop">Sorry</div>
+                        </TD>
+                    </TR>
+                    <tr>
+                        <td>
+                            <div class="StepDirections">Our records show you may have already taken advantage of our
+                                upgrade!</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <!-- upsell var
+{$upsell.details.name}
+{if $upsell.details.description}<br/>{$upsell.details.description}{/if}
+{if $upsell.details.disclaimer}<br/>{$upsell.details.disclaimer}{/if}
+-->
+
+
+
+            <div style="color: #000000; width: 100%; text-align: center;"><br>
+                If you have any questions, please contact a <A HREF="https://www.nakedsword.com/" target="_blank"
+                    style="text-decoration: none;">
+                    <font color="#112d5d" style="text-decoration: none;">Nakedsword.com</font>
+                </A> customer service specialist by clicking on the "<A HREF="https://nakedsword.com/help"
+                    target="_blank" style="text-decoration: none;">
+                    <font color="#112d5d" style="text-decoration: none;">Help</font>
+                </A>" tab or calling U.S. (TOLL FREE) 800.314.5350 <br>
+                <div
+                    style="display: block; text-align: center; margin: 10px; font-size: .85em; font-style: italic; width: 100%;">
+                    - Monday to Friday 10am-8pm | All times are US Eastern Time. Closed Saturday and Sunday -</div>
+            </div>
+
+
+        </div><!-- // PageMiddle -->
+
+
+
+
+
+        <div class="PageRight">
+
+
+            &nbsp;
+
+
+        </div><!-- // PageRight -->
+
+
+    </div><!-- end UpsellPageContain -->
+
+
+
+
+</body>
+
+</html>

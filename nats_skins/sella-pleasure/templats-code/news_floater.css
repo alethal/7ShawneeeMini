@@ -1,0 +1,379 @@
+/* news floater */
+.news-floater-wrap .open-close {
+    display: block !important;
+    visibility: visible !important;
+}
+
+.news-floater-wrap {
+    display: block;
+    position: relative;
+    background: #cccccc;
+}
+
+#news-floater-box {
+    display: block;
+    z-index: 100;
+    position: absolute;
+    max-width: 250px;
+    width: 100%;
+    right: -55px;
+    margin-right: 10px;
+    top: -45px;
+}
+
+/* copied over from mainblock */
+.newsblock-smp {
+    margin-bottom: 8px;
+    width: 100%;
+    background: #E6E6E6;
+}
+
+.newsblock-smp .dashbox-link {
+    float: right;
+    display: block;
+    padding: 5px 3px 5px 3px;
+    font-weight: bold;
+    background-color: #9EC5FF;
+    text-transform: uppercase;
+    margin: 2px 0 2px 0;
+    padding: 4px;
+    color: #1D2838;
+    border-radius: 4px;
+    border: 1px groove #5F82B7;
+}
+
+
+.newsblock-smp .dashbox-link:hover {
+    background-color: #1D2838;
+    color: #fffeec;
+    border: 1px ridge #1D2838;
+}
+
+.newsblock-smp .dashbox-link:hover a {
+    color: #fffeec;
+}
+
+
+.twocolumn.affiliatenewspage .box .heading,
+.twothirds.newsblock-smp .box:first-child .heading,
+.affiliatenewspage .newsblock-smp .box:first-child .heading,
+.affiliatenewspage box.newsblock-smp .heading,
+box.newsblock-smp .heading,
+.twocolumn.newsblock-smp .box .heading,
+.newsblock-smp .heading {
+    width: 100% !important;
+    max-width: 100%;
+    height: 39px;
+    position: relative;
+    overflow: hidden;
+    background: url(../nats_images/heading-gradient.png) repeat-x #1D2838 !important;
+    border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    padding-right: 20px;
+}
+
+.twocolumn.affiliatenewspage .box .heading {
+    padding-right: 0;
+}
+
+
+.affiliatenewspage .section_header4,
+.affiliatenewspage .section_header3,
+.affiliatenewspage .section_header2,
+.affiliatenewspage .section_header5,
+.affiliatenewspage .section_header {
+    font-weight: bold;
+    font-size: 12x;
+    background: #1D2838 !important;
+    color: #1D2838 !important;
+    padding: 20px 0 0;
+    text-align: left;
+    height: 28px;
+}
+
+.twothirds.newsblock-smp.external .box:first-child .heading,
+box.newsblock-smp.external .heading,
+.twocolumn.newsblock-smp.external .box .heading,
+.newsblock-smp.external .heading {
+    padding-right: 0px;
+}
+
+.newsblock-smp.external h2:after,
+.affiliatenewspage .newsblock-smp h2:after {
+    content: '';
+    display: block;
+}
+
+.newsblock-smp .section_header1,
+.newsblock-smp .section_header2,
+.newsblock-smp .section_header3,
+.newsblock-smp .section_header4,
+.newsblock-smp .section_header5 {
+    background-color: #1D2838 !important;
+    color: #fffeec !important;
+}
+
+
+/*
+.newsblock-smp .heading {
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    height: 39px;
+    background: url(../nats_images/heading-gradient.png) repeat-x #1D2838;
+    border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+}
+*/
+/* removed , .threeblocks .box .heading .hold, .twocolumn .box .heading .hold, .twothirds .box .heading .hold */
+
+
+
+.newsblock-smp h2:after {
+    content: "NEWS";
+    display: block;
+    text-align: left;
+    color: #1D2838;
+}
+
+
+.newsblock-smp .heading .hold {
+    height: 29px;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 11px 0 13px;
+    display: none;
+    visibility: hidden;
+}
+
+
+
+
+.newsblock-smp .heading .open-close,
+.newsblock-smp .heading .btn,
+.newsblock-smp .heading .helpbtn {
+    float: right;
+    cursor: pointer;
+    margin: 0 -15px 0 0;
+    height: 20px;
+    font-size: 12px;
+    line-height: 1;
+    color: #fffeec;
+    min-width: 34px;
+    overflow: hidden;
+}
+
+
+.newsblock-smp .heading .open-close {
+    font-size: 20px;
+    line-height: 15px;
+}
+
+
+.newsblock-smp h2,
+.external newsblock-smp h2 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fffeec;
+}
+
+
+
+
+.newsblock-smp .heading .open-close span,
+.newsblock-smp .box .heading .open-close span,
+.newsblock-smp .box .heading .open-close span,
+.newsblock-smp .box .heading .open-close span,
+.newsblock-smp .heading .btn span,
+.newsblock-smp .box .heading .btn span,
+.newsblock-smp .box .heading .btn span,
+.newsblock-smp .box .heading .btn span,
+.newsblock-smp .heading .helpbtn span,
+.newsblock-smp .box .heading .helpbtn span,
+.newsblock-smp .box .heading .helpbtn span,
+.newsblock-smp .box .heading .helpbtn span,
+.twocolumn .newsblock-smp .box .heading .open-close span {
+    float: left;
+    height: 20px;
+    padding: 0 9px 0 8px;
+    letter-spacing: -1px;
+    background-color: #fffeec;
+    border-radius: 3px;
+    margin-top: 2px;
+    -moz-border-radius: 3px;
+    width: 100%;
+}
+
+
+.newsblock-smp .box .heading .open-close:hover span {
+    background: #1D2838;
+    color: #fffeec;
+}
+
+
+.newsblock-smp .box .heading .open-close span.open-plus {
+    margin-top: -5px;
+    height: 20px;
+    font-size: 10px;
+}
+
+
+
+.twocolumn #news-floater-box.box .heading {
+    width: 100%;
+    padding-right: 20px;
+    height: 39px;
+    position: relative;
+    overflow: visible;
+    background: url(../nats_images/heading-gradient.png) repeat-x #9EC5FF !important;
+    border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+}
+
+
+.twocolumn .box-hold #news-floater-box.box:first-child .content {
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 0;
+    -moz-border-radius-bottomright: 0;
+}
+
+.twocolumn .box-hold #news-floater-box.box .content {
+    width: 100%;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 0;
+    -moz-border-radius-bottomright: 0;
+    padding: 10px;
+}
+
+
+
+/*
+.newsblock-smp .btn.box-set-options { display: none; visibility: hidden; }
+
+*/
+
+.newsblock-smp.content {
+    padding: 0 1px;
+    width: 1230px;
+}
+
+.newsblock-smp .content {
+    background: url(../nats_images/sub-nav-gradient.png) repeat-x #ffffffd1;
+    border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-box-shadow: 0 2px 2px #888888;
+    -moz-box-shadow: 0 2px 2px #888888;
+    box-shadow: 0 2px 2px #888888;
+}
+
+.newsblock-smp .content:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* list and more content settings for box */
+
+
+.newsblock-smp .content {
+    padding: 10px;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+
+.newsblock-smp .icons-list,
+.newsblock-smp .info-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.newsblock-smp .info-list,
+.newsblock-smp .icons-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+}
+
+.newsblock-smp .info-list li,
+.newsblock-smp .icons-list li {
+    padding: 0;
+    border-top: 1px #D1D1D1 solid;
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0 0 0 20px;
+}
+
+.newsblock-smp .info-list .list-first,
+.newsblock-smp .icons-list .list-first {
+    border-top: 0;
+}
+
+.newsblock-smp .info-list .list-last,
+.newsblock-smp .icons-list .list-last {
+    padding: 0;
+}
+
+.newsblock-smp .icons-list li a {
+    cursor: pointer;
+    margin: 0;
+}
+
+.newsblock-smp .icons-list li a img {
+    vertical-align: top;
+    display: none;
+    visibility: hidden;
+}
+
+.newsblock-smp .icons-list li:before {
+    background-image: url('https://sellapleasure.com/img-smp/news-icon.png');
+    background-repeat: no-repeat;
+    background-size: 17px 17px;
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    margin: 0px 0 -20px -25px;
+    content: "";
+    visibility: visible;
+    background-position: 5px 0px;
+}
+
+
+
+
+.newsblock-smp .icons-list li a strong {
+    padding-left: 0;
+    margin: -5px 0 0 0;
+    display: block;
+}
+
+.newsblock-smp .icons-list li a:hover {
+    text-decoration: none;
+    border: 0;
+}
+
+.newsblock-smp .icons-list li .remove_bookmark:hover {
+    text-decoration: none;
+    background: #CCCCCC;
+    border: 1px solid #AAAAAA;
+}
+
+.newsblock-smp .icons-list li a:hover strong {
+    text-decoration: underline;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Newsletter Builder</title>
+    <meta content="Best Free Open Source Responsive No-Code Newsletter HTML Email Builder" name="description">
+    <link rel="stylesheet" href="stylesheets/grapes.min.css">
+    <link rel="stylesheet" href="stylesheets/material.css">
+    <link rel="stylesheet" href="stylesheets/tooltip.css">
+    <link rel="stylesheet" href="stylesheets/demos.css">
+
+    <script src="js/grapes.min.js?v0.21.4"></script>
+    <!-- <script src="./js/ckeditor/ckeditor.js"></script> -->
+    <!-- <script src="https://unpkg.com/grapesjs-plugin-ckeditor@0.0.10"></script> -->
+    <!--script src="js/grapespluginckeditor.js"></script-->
+    <script src="https://unpkg.com/grapesjs-preset-newsletter@1.0.1"></script>
+</head>
+<style>
+    .nl-link {
+        color: inherit;
+    }
+
+    .gjs-logo-version {
+        background-color: #5a606d;
+    }
+
+    .cke_toolbar.cke_toolbar {
+        min-height: 33px;
+    }
+</style>
+
+<body>
+
+    <div id="gjs"></div>
+
+
+
+    <script type="text/javascript">
+        var editor = grapesjs.init({
+            container: '#gjs',
+            ...
+            plugins: ['grapesjs-preset-newsletter'],
+            pluginsOpts: {
+                'grapesjs-preset-newsletter': {
+                    // options
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Title</title>
+    <!--link href="stylesheets/main.css" rel="stylesheet" /-->
+    <!-- https://gist.github.com/thomd/9220049 -->
+    
+    <style>
+.affiliateResult { display: none; }
+      </style>
+  </head>
+  <body>
+    <header>
+      <hgroup>
+        <h1>Header</h1>
+        <h2>Subheader</h2>
+      </hgroup>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Menu Option 1</a></li>
+        <li><a href="#">Menu Option 2</a></li>
+      </ul>
+    </nav>
+    <section>
+      <article>
+        <header>
+          <h1>Article #1</h1>
+        </header>
+        <section>
+          <select id="selectTime">
+            <option>Select Option</option>
+            <option value="Today">Today</option>
+            <option value="CurrentPeriod">Current Period</option>
+            <option value="LastPeriod">Last Period</option>
+            <option value="Yesterday">Yesterday</option>
+            <option value="ThisWeek">This Week</option>
+            <option value="ThisMonth">This Month</option>
+            <option value="ThisYear">This Year</option>
+            <option value="AllTime">All Time</option>
+          </select>
+          <div id="showToday" class="affiliateResult">
+            You have selected option <strong>"Today"</strong>.
+          </div>
+          <div id="showCurrentPeriod" class="affiliateResult">
+            You have selected option <strong>"Current Period"</strong>.
+          </div>
+          <div id="showLastPeriod" class="affiliateResult">
+            You have selected option <strong>"Last Period"</strong>.
+          </div>
+          <div id="showYesterday" class="affiliateResult">
+            You have selected option <strong>"Yesterday"</strong>.
+          </div>
+          <div id="showThisWeek" class="affiliateResult">
+            You have selected option <strong>"This Week"</strong>.
+          </div>
+          <div id="showThisMonth" class="affiliateResult">
+            You have selected option <strong>"This Month"</strong>.
+          </div>
+          <div id="showThisYear" class="affiliateResult">
+            You have selected option <strong>"This Year"</strong>.
+          </div>
+          <div id="showAllTime" class="affiliateResult">
+            You have selected option <strong>"All Time"</strong>.
+          </div>
+        </section>
+      </article>
+      <article>
+        <header>
+          <h1>Article #2</h1>
+        </header>
+        <section>
+          
+
+https://www.sliderrevolution.com/resources/css-select-styles/<br>
+<form id="app-cover">
+  <div id="select-box">
+    <input type="checkbox" id="options-view-button">
+    <div id="select-button" class="brd">
+      <div id="selected-value">
+        <span>Select a platform</span>
+      </div>
+      <div id="chevrons">
+        <i class="fas fa-chevron-up"></i>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+    <div id="options">
+      <div class="option">
+        <input class="s-c top" type="radio" name="platform" value="codepen">
+        <input class="s-c bottom" type="radio" name="platform" value="codepen">
+        <i class="fab fa-codepen"></i>
+        <span class="label">CodePen</span>
+        <span class="opt-val">CodePen</span>
+      </div>
+      <div class="option">
+        <input class="s-c top" type="radio" name="platform" value="dribbble">
+        <input class="s-c bottom" type="radio" name="platform" value="dribbble">
+        <i class="fab fa-dribbble"></i>
+        <span class="label">Dribbble</span>
+        <span class="opt-val">Dribbble</span>
+      </div>
+      <div class="option">
+        <input class="s-c top" type="radio" name="platform" value="behance">
+        <input class="s-c bottom" type="radio" name="platform" value="behance">
+        <i class="fab fa-behance"></i>
+        <span class="label">Behance</span>
+        <span class="opt-val">Behance</span>
+      </div>
+      <div class="option">
+        <input class="s-c top" type="radio" name="platform" value="hackerrank">
+        <input class="s-c bottom" type="radio" name="platform" value="hackerrank">
+        <i class="fab fa-hackerrank"></i>
+        <span class="label">HackerRank</span>
+        <span class="opt-val">HackerRank</span>
+      </div>
+      <div class="option">
+        <input class="s-c top" type="radio" name="platform" value="stackoverflow">
+        <input class="s-c bottom" type="radio" name="platform" value="stackoverflow">
+        <i class="fab fa-stack-overflow"></i>
+        <span class="label">StackOverflow</span>
+        <span class="opt-val">StackOverflow</span>
+      </div>
+      <div class="option">
+        <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+        <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+        <i class="fab fa-free-code-camp"></i>
+        <span class="label">FreeCodeCamp</span>
+        <span class="opt-val">FreeCodeCamp</span>
+      </div>
+      <div id="option-bg"></div>
+    </div>
+  </div>
+</form>
+
+
+
+        </section>
+      </article>
+    </section>
+    <aside>
+      <section>
+        <h1>Links</h1>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+        </ul>
+      </section>
+      <figure>
+        <img
+          width="85"
+          height="85"
+          src="http://domain.tld/path/to/image.jpg"
+          alt="foobar"
+        />
+        <figcaption>Foobar</figcaption>
+      </figure>
+    </aside>
+    <footer>Footer</footer>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#selectTime").on("change", function () {
+        var timeselected = $(this).val();
+        $("div.affiliateResult").hide();
+        $("#show" + timeselected).show();
+      });
+    });
+  </script>
+</html>

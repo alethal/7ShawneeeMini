@@ -1,0 +1,88 @@
+#7FolderSpecific
+
+**CreativeCloudDownloads/
+**PhotoshopCloud/
+adobe_icloud/
+AndroidDebug/
+brave-downloads/
+ChromeWorkspace/
+CreativeCloudTransferPoint/
+GGL-workspaces/
+GGLDrive-shawnATSpiffydesignDOTcom/
+IDriveDownloads/
+jetbrains-gateway-log/
+MacDroid/
+54.175.243.222.inetloc
+2zoom
+
+#macOS
+
+.history/
+.vscode/
+
+# General
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+
+Icon
+
+# Thumbnails
+
+.\_\*
+
+# Files that might appear in the root of a volume
+
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Xcode
+
+#
+
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+
+## Xcode 8 and earlier
+
+_.xcscmblueprint
+_.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+
+build/
+DerivedData/
+_.moved-aside
+_.pbxuser
+!default.pbxuser
+_.mode1v3
+!default.mode1v3
+_.mode2v3
+!default.mode2v3
+\*.perspectivev3
+!default.perspectivev3
+
+## Gcc Patch
+
+/\*.gcno

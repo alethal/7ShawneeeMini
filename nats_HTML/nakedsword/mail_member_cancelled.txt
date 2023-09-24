@@ -1,0 +1,18 @@
+Dear {$member.firstname},
+
+Although you’ve chosen to end your membership at NakedSword, we hope you won't leave us for good! 
+
+With exclusive NakedSword Originals content you won't find anywhere else, plus two new content updates every day, from studios like Falcon, Raging Stallion, Treasure Island, and hundreds of other super hot studios, there's never been a better time to stick with NakedSword.
+
+
+___________________________________________________
+
+
+To reactivate your membership go to http://join.nakedsword.com/signup/signup.php and resume watching the hottest gay porn anywhere!
+
+Or, don’t do anything at all and your membership will expire on {if $member.expires} {$member.expires|date_format:"%m-%d-%Y"} {else} {$member.nats_expires|date_format:"%m-%d-%Y"}{/if}, but we hate to see you go! We offer our sincere thanks for being a NakedSword member, and we’re glad that you chose to get off with us as long as you have.
+
+We hope you'll consider coming back soon.
+
+Sincerely,
+Everyone at NakedSword

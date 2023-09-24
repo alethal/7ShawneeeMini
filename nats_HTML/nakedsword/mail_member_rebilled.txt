@@ -1,0 +1,12 @@
+Dear {$member.firstname} {$member.lastname},
+
+Thank you for your continued membership to {$details.siteid.name}!
+
+Your account on file with {$details.billerid.biller} has been charged {$details.optionid.rebill} and your membership has been extended until {if $member.expires} {$member.expires|date_format:"%m-%d-%Y"} {else} {$member.nats_expires|date_format:"%m-%d-%Y"}{/if}.
+
+If you have any questions, or you think you've received this notification in error, please contact a http://www.NakedSword.com customer service specialist by clicking on the "Help" tab or calling 888-207-4534.
+
+---
+
+Thanks,
+NakedSword Customer Support

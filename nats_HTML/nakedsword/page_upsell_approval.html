@@ -1,0 +1,622 @@
+{if $smarty.request.upsellid==4568}
+{*
+
+QREEL PAGE :::::::::::::::::::
+
+*}
+
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Approved</title>
+
+
+
+    {literal}
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WGG88K');</script>
+    <!-- End Google Tag Manager -->
+
+    {/literal}
+
+
+
+    {literal}
+    <!-- Google Analytics Join.NakedSword - updated rgate code oct28 2020 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-856518-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+        gtag('js', new Date());
+        gtag('config', 'UA-856518-1', {
+            'linker': {
+                'accept_incoming': true,
+                'domains': ['nakedsword.com', 'join.nakedsword.com', 'rocketgate.com']
+            }
+        });
+    </script>
+
+
+
+    {/literal}
+
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+
+            {
+            literal
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            color: #000;
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif !important;
+            color: #000;
+            font-weight: 100 !important;
+            background: #fff;
+            margin: 0px;
+        }
+
+        a:link {
+            color: #02deff;
+            font-weight: 400;
+        }
+
+        a:visited {
+            color: #02deff;
+            font-size: 1.15em;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        a:hover {
+            color: #000000;
+        }
+
+        a:active {
+            color: #000000;
+        }
+
+
+        .row.expanded {
+            max-width: none;
+        }
+
+        .row.collapse .columns {
+            padding-left: 0;
+            padding-right: 0
+        }
+
+        .small-12 {
+            width: 98%;
+            padding-left: .625rem;
+            padding-right: .625rem;
+
+        }
+
+
+        .NavLogoAccountLargeRow {
+            position: relative;
+            background: #ffffff;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .row {
+            max-width: 75rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .columns {
+            width: 100%;
+            float: left;
+            padding-left: .625rem;
+            padding-right: .625rem;
+        }
+
+
+        .small-6 {
+            width: 48%;
+        }
+
+        @media (max-width: 700px) {
+            .small-12 {
+                width: 95%;
+            }
+
+            .small-6 {
+                width: 95%;
+            }
+
+            h2 {
+                font-size: 1em;
+                font-weight: 400;
+            }
+
+            .MaintText {
+                width: 95%;
+            }
+        }
+    </style>
+
+    {/literal}
+
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGG88K" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <div class="row expanded text-center NavLogoAccountLargeRow">
+        <div class="row collapse">
+            <!-- logo -->
+            <div class="small-12 text-center">
+                <a href="https://www.qreel.com/" target="_blank"><img
+                        src="https://d19lip76nt1lku.cloudfront.net/qreel/logo2.jpg" width="25%"
+                        alt="Life Is Queer. Watch It Here." border="0" title="Life Is Queer. Watch It Here." /></a>
+            </div>
+            <!-- // logo -->
+        </div>
+    </div>
+
+
+
+    <div class="row expanded text-center NavLogoAccountLargeRow">
+        <div class="row collapse">
+            <!-- logo -->
+            <div class="small-12 text-center">
+                <a href="https://www.qreel.com/" target="_blank"><img
+                        src="https://d19lip76nt1lku.cloudfront.net/qreel/updated_headers/WELCOME_membership_banner.jpg"
+                        width="100%" alt="Life Is Queer. Watch It Here." border="0"
+                        title="Life Is Queer. Watch It Here." /></a>
+            </div>
+            <!-- // logo -->
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="small-12">
+
+            <BR />&nbsp;<br />
+
+            Hello {$member.firstname},<br /><br />
+
+            <strong><A HREF="https://www.qreel.com/" target="_blank">
+                    <font color="#02deff" style="text-decoration: none;">Welcome to Qreel.com!</font>
+                </A></strong> <BR><BR>
+            You've joined the internet's newest VOD streaming service dedicated to LGBTQ cinema! Sit back, relax and
+            browse through our carefully selected feature length and short films from around the world. Life is Queer.
+            Watch it Here.
+
+            <p>Here is the status of your selected offers:</p>
+            <table border=0 cellpadding="0" cellspacing="0">
+                {foreach from=$response key=upsellid item=reply}
+                <tr>
+                    <td>{$upsells[$upsellid].details.name}</td>
+                    <td>{if $reply}Approved{else}Declined{/if}</td>
+                </tr>
+                {/foreach}
+            </table>
+
+
+
+            If you have any questions, please contact a <A HREF="https://www.qreel.com/" target="_blank"
+                style="text-decoration: none;">
+                <font color="#02deff" style="text-decoration: none;">Qreel.com</font>
+            </A> customer service specialist by clicking on the "<A HREF="https://www.qreel.com/help" target="_blank"
+                style="text-decoration: none;">
+                <font color="#02deff" style="text-decoration: none;">Help</font>
+            </A>" tab or calling U.S. (TOLL FREE) 800.314.5350 - Monday to Friday 10am-8pm | All times are US Eastern
+            Time. Closed Saturday and Sunday.
+
+
+
+
+
+
+
+        </div>
+    </div><!-- // row / col -->
+
+
+
+    <div class="row expanded text-center">
+        <div class="row collapse">
+            <!-- logo -->
+            <div class="small-12 text-center"><BR /><BR />
+
+            </div>
+            <!-- // logo -->
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
+
+
+{elseif $smarty.request.upsellid==4578}
+
+
+
+
+
+{*
+FUNNNNNN SIZZZZEEEEE BOYYYYYYSSSSSSSS
+*}
+
+
+
+<html>
+
+<head>
+    <title>Enjoy Fun Size Boys</title>
+
+
+
+
+    {literal}
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WGG88K');</script>
+    <!-- End Google Tag Manager -->
+
+    {/literal}
+
+
+
+    {literal}
+    <!-- Google Analytics Join.NakedSword - updated rgate code oct28 2020 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-856518-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+        gtag('js', new Date());
+        gtag('config', 'UA-856518-1', {
+            'linker': {
+                'accept_incoming': true,
+                'domains': ['nakedsword.com', 'join.nakedsword.com', 'rocketgate.com']
+            }
+        });
+    </script>
+
+
+
+    {/literal}
+
+
+
+    {literal}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://nakedsword.com/nakedsword_now/ns2021look-nats-upsell-generic.css" rel="stylesheet">
+    {/literal}
+
+
+
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGG88K" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="UpsellPageContain">
+
+        <div class="nslogoheader"><img alt="Logo" src="https://spotlight.nakedcdn.com/ns-logos-svg/NakedSword_white.svg"
+                class="logo"></div>
+
+        <div class="UpsellImgH"><img src="https://assets.nakedsword.com/pictures/banners/1665/77113.jpg" width="100%:"
+                height="auto"></div>
+
+        <div class="PageLeft">
+
+
+            &nbsp;
+
+
+        </div><!-- // PageLeft -->
+
+        <div class="PageMiddle">
+
+
+            <div class="join_form_wrapper">
+
+
+                <BR />&nbsp;<br />
+
+                Hello {$member.firstname},<br /><br />
+
+                <div class="join-headers headertop">You have successfully joined FunSizeBoys.com</div>
+                <BR><BR>
+                <div>
+
+                    You can use the same login at FunSizeBoys.com as you do on NakedSword.com + check your email for
+                    your keys to the kingdom!
+
+                    <br><br>
+
+                    <div style="max-width: 400px; margin: 0 auto;  text-align: center; display: block;">
+                        <div>
+                            <p>Username:{$member.username}</p>
+                            <p>Password: &nbsp;******</p>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <a href="https://funsizeboys.com" target="_blank"
+                        style="color: #ffffff; text-decoration: none; font-weight: bold;"><img
+                            src="https://spotlight.nakedcdn.com/nakedsword/img/funsizdeboyslogo.png" border="0"
+                            style="max-width: 250px;"><br>CLICK HERE to start having some fun with
+                        funsizeboys!</a><br><br>&nbsp;<br><br>
+
+                    <!--
+<p align="center">Here is the status of your selected offers:</p>
+<table border=0 cellpadding="10" cellspacing="0" width="100%">
+{foreach from=$response key=upsellid item=reply}
+<tr><td align="right">{$upsells[$upsellid].details.name}</td>
+<td align="left">{if $reply}Approved{else}Declined{/if}</td>
+</tr>
+{/foreach}
+</table>
+-->
+
+                </div>
+
+                </form>
+            </div>
+
+
+
+
+            <!-- upsell var
+{$upsell.details.name}
+{if $upsell.details.description}<br/>{$upsell.details.description}{/if}
+{if $upsell.details.disclaimer}<br/>{$upsell.details.disclaimer}{/if}
+-->
+
+
+
+
+
+        </div><!-- // PageMiddle -->
+
+
+
+
+
+        <div class="PageRight">
+
+
+            &nbsp;
+
+
+        </div><!-- // PageRight -->
+
+
+    </div><!-- end UpsellPageContain -->
+
+
+
+
+</body>
+
+</html>
+
+
+{else}
+
+
+{*
+
+DEFAULT PAGE :::::::::::::::::::
+
+5873 - added $additionalFields to the form
+6462 - added auth string
+- corrected hidden form fields
+7001 - Added Proper HTML
+13098 - upsellplus for inactive member
+13307 - add support for multi-dimensional member_extra
+*}
+<html>
+
+<head>
+    <title>Success</title>
+
+
+
+
+    {literal}
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WGG88K');</script>
+    <!-- End Google Tag Manager -->
+
+    {/literal}
+
+
+
+    {literal}
+    <!-- Google Analytics Join.NakedSword - updated rgate code oct28 2020 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-856518-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+        gtag('js', new Date());
+        gtag('config', 'UA-856518-1', {
+            'linker': {
+                'accept_incoming': true,
+                'domains': ['nakedsword.com', 'join.nakedsword.com', 'rocketgate.com']
+            }
+        });
+    </script>
+
+
+
+    {/literal}
+
+
+    {literal}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://nakedsword.com/nakedsword_now/ns2021look-nats-upsell-generic.css" rel="stylesheet">
+    {/literal}
+
+
+
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGG88K" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="UpsellPageContain">
+
+        <div class="nslogoheader"><img alt="Logo" src="https://spotlight.nakedcdn.com/ns-logos-svg/NakedSword_white.svg"
+                class="logo"></div>
+
+        <div class="UpsellImgH"><img src="https://assets.nakedsword.com/pictures/banners/1665/77113.jpg" width="100%:"
+                height="auto"></div>
+
+        <div class="PageLeft">
+
+
+            &nbsp;
+
+
+        </div><!-- // PageLeft -->
+
+        <div class="PageMiddle">
+
+            <div class="join_form_wrapper">
+
+
+                <BR />&nbsp;<br />
+
+                Hello {$member.firstname},<br /><br />
+
+                <div class="join-headers headertop">You have successfully completed your upsell!</div><BR><BR>
+                <div class="DealInfo">
+                    Keys to the kingdom (also check your email)!<br><br>
+
+                    <p align="center">Here is the status of your selected offers:</p>
+                    <table border=0 cellpadding="10" cellspacing="0" width="100%">
+                        {foreach from=$response key=upsellid item=reply}
+                        <tr>
+                            <td align="right">{$upsells[$upsellid].details.name}</td>
+                            <td align="left">{if $reply}Approved{else}Declined{/if}</td>
+                        </tr>
+                        {/foreach}
+                    </table>
+
+                </div>
+
+
+
+
+                </form>
+            </div>
+
+
+            <!-- upsell var
+{$upsell.details.name}
+{if $upsell.details.description}<br/>{$upsell.details.description}{/if}
+{if $upsell.details.disclaimer}<br/>{$upsell.details.disclaimer}{/if}
+-->
+
+
+            <div style="color: #000000; width: 100%; text-align: center;"><br>
+                If you have any questions, please contact a <A HREF="https://www.nakedsword.com/" target="_blank"
+                    style="text-decoration: none;">
+                    <font color="#112d5d" style="text-decoration: none;">Nakedsword.com</font>
+                </A> customer service specialist by clicking on the "<A HREF="https://nakedsword.com/help"
+                    target="_blank" style="text-decoration: none;">
+                    <font color="#112d5d" style="text-decoration: none;">Help</font>
+                </A>" tab or calling U.S. (TOLL FREE) 800.314.5350 <br>
+                <div
+                    style="display: block; text-align: center; margin: 10px; font-size: .85em; font-style: italic; width: 100%;">
+                    - Monday to Friday 10am-8pm | All times are US Eastern Time. Closed Saturday and Sunday -</div>
+            </div>
+
+
+
+        </div><!-- // PageMiddle -->
+
+
+
+
+
+        <div class="PageRight">
+
+
+            &nbsp;
+
+
+        </div><!-- // PageRight -->
+
+
+    </div><!-- end UpsellPageContain -->
+
+
+
+
+</body>
+
+</html>
+
+{/if}

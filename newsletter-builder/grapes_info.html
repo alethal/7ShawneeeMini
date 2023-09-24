@@ -1,0 +1,63 @@
+#Download
+Latest version: npm(opens new window)
+
+You can download GrapesJS from one of these sources
+
+CDNs
+unpkg
+https://unpkg.com/grapesjs
+https://unpkg.com/grapesjs/dist/css/grapes.min.css
+cdnjs
+https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.12.17/grapes.min.js
+https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.12.17/css/grapes.min.css
+npm
+npm i grapesjs
+git
+git clone https://github.com/GrapesJS/grapesjs.git
+#
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++
+IMPORT LIBRARY
+
+<link rel="stylesheet" href="//unpkg.com/grapesjs/dist/css/grapes.min.css">
+<script src="//unpkg.com/grapesjs"></script>
+
+
+<!--
+If you need plugins, put them below the main grapesjs script
+<script src="/path/to/some/plugin.min.js"></script>
+-->
+
+
+
+<div id="gjs">
+    <h1>Hello World Component!</h1>
+</div>
+const editor = grapesjs.init({
+// Indicate where to init the editor. You can also pass an HTMLElement
+container: '#gjs',
+// Get the content for the canvas directly from the element
+// As an alternative we could use: `components: '<h1>Hello World Component!</h1>'`,
+fromElement: true,
+// Size of the editor
+height: '300px',
+width: 'auto',
+// Disable the storage manager for the moment
+storageManager: false,
+// Avoid any default panel
+panels: { defaults: [] },
+});
+/* Let's highlight canvas boundaries */
+#gjs {
+border: 3px solid #444;
+}
+
+/* Reset some default styling */
+.gjs-cv-canvas {
+top: 0;
+width: 100%;
+height: 100%;
+}

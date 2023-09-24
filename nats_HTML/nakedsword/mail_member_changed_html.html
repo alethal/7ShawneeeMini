@@ -1,0 +1,19 @@
+Dear NakedSword Member,
+
+This is a head's up that your account has been changed.
+Username: {$member.username}
+{foreach from=$changes item=item key=key}
+{if $key != "cryptpass"}
+{if $item != $member[$item]}
+{$key}: {$item}
+{/if}
+{/if}
+{/foreach}
+
+If you have any questions, or you think you've received this notification in error, please contact a
+http://www.nakedsword.com customer service specialist by clicking on the "Help" tab or calling 888-207-4534.
+
+___________________________________________________
+
+Thanks,
+NakedSword Customer Support

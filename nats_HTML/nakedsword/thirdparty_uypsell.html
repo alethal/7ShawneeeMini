@@ -1,0 +1,1490 @@
+{if $smarty.request.upsellid==4568}
+{*
+5873 - added $additionalFields to the form
+6462 - added auth string
+- corrected hidden form fields
+7001 - Added Proper HTML
+13098 - upsellplus for inactive member
+13307 - add support for multi-dimensional member_extra
+*}
+<html>
+
+<head>
+    <title>Get Qreel</title>
+
+
+
+
+    {literal}
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WGG88K');</script>
+    <!-- End Google Tag Manager -->
+
+    {/literal}
+
+
+
+    {literal}
+    <!-- Google Analytics Join.NakedSword - updated rgate code oct28 2020 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-856518-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+        gtag('js', new Date());
+        gtag('config', 'UA-856518-1', {
+            'linker': {
+                'accept_incoming': true,
+                'domains': ['nakedsword.com', 'join.nakedsword.com', 'rocketgate.com']
+            }
+        });
+    </script>
+
+
+
+    {/literal}
+
+
+
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300' rel='stylesheet'
+        type='text/css'>
+    <!-- slick  -->
+    <link rel='stylesheet' type='text/css' href='https://nakedsword.com/css/slickv160min.css' />
+
+    <style type="text/css">
+        {
+            literal
+        }
+
+        .join_table {
+            font-family: 'Oswald', 'Open Sans', sans-serif;
+            font-size: .75em;
+            color: #000000;
+            width: 100%;
+            border: 0px solid #000000;
+            padding: 5px;
+            margin: 0px;
+        }
+
+        .join_name {
+            font-weight: bold;
+            text-align: right;
+            border: none;
+            padding: 0em 0 0 0;
+        }
+
+        .join_value {
+            text-align: left;
+            border: none;
+            padding: .5em 0 0 0;
+        }
+
+        .join_error {
+            color: #EE0000;
+        }
+
+        .join_header {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+        }
+
+        .join_footer {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+        }
+
+        .join_input {}
+
+        .join_select {}
+
+        .join_button {}
+
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+        }
+
+        body .ondisplay {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        body .ondisplay section {
+            width: 100px;
+            height: 100px;
+            background: #555;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            margin-top: 5px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        }
+
+        body .ondisplay section:after {
+            /*         visibility: hidden; */
+            content: attr(title);
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 3px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            text-shadow: 0px 1px #000;
+        }
+
+        h3 {
+            display: block;
+            font-size: 1em;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            margin: 0px;
+            padding: 0px;
+            font-weight: 400;
+        }
+
+
+        @charset 'UTF-8';
+        /* Slider */
+
+        .sliderLeftWrap {
+            background-color: transparent;
+            width: 25%;
+            float: left;
+        }
+
+        .sliderRightWrap {
+            background-color: transparent;
+            width: 25%;
+            float: left;
+        }
+
+        .join_table_left {
+            width: 40%;
+        }
+
+        .join_table_center {
+            width: 33%;
+        }
+
+        .join_table_right {
+            width: 26%;
+        }
+
+        .join_form_wrapper {
+            float: left;
+            background-color: transparent;
+            width: 49.9%;
+        }
+
+        @media only screen and (max-width: 540px) {
+
+            .sliderLeftWrap {
+                visibility: hidden;
+                display: none;
+                float: left;
+                background-color: transparent;
+                width: 0%;
+            }
+
+            .sliderRightWrap {
+                background-color: transparent;
+                width: 100%;
+                clear: both;
+            }
+
+            h3 {
+                font-size: .75em;
+            }
+
+            .join_form_wrapper {
+                float: left;
+                background-color: transparent;
+                width: 100%;
+            }
+
+            .join_table_left {
+                width: 25%;
+            }
+
+            .join_table_center {
+                width: 50%;
+            }
+
+            .join_table_right {
+                width: 25%;
+            }
+
+
+        }
+
+
+        .slick-loading .slick-list {
+            background: #fff url('./ajax-loader.gif') center center no-repeat;
+        }
+
+        /* Icons */
+        @font-face {
+            font-family: 'slick';
+            font-weight: normal;
+            font-style: normal;
+
+            src: url('https://nakedsword.com/font/slick.eot');
+            src: url('https://nakedsword.com/font/slick.eot?#iefix') format('embedded-opentype'), url('https://nakedsword.com/font/slick.woff') format('woff'), url('https://nakedsword.com/font/slick.ttf') format('truetype'), url('https://nakedsword.com/font/slick.svg#slick') format('svg');
+        }
+
+        /* Arrows */
+        .slick-prev,
+        .slick-next {
+            font-size: 0;
+            line-height: 0;
+
+            position: absolute;
+            top: 50%;
+
+            display: block;
+
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            -webkit-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+
+            cursor: pointer;
+
+            color: transparent;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+
+        .slick-prev:hover,
+        .slick-prev:focus,
+        .slick-next:hover,
+        .slick-next:focus {
+            color: transparent;
+            outline: none;
+            background: transparent;
+        }
+
+        .slick-prev:hover:before,
+        .slick-prev:focus:before,
+        .slick-next:hover:before,
+        .slick-next:focus:before {
+            opacity: 1;
+        }
+
+        .slick-prev.slick-disabled:before,
+        .slick-next.slick-disabled:before {
+            opacity: .25;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            font-family: 'slick';
+            font-size: 20px;
+            line-height: 1;
+
+            opacity: .75;
+            color: white;
+
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .slick-prev {
+            left: -25px;
+        }
+
+        [dir='rtl'] .slick-prev {
+            right: -25px;
+            left: auto;
+        }
+
+        .slick-prev:before {
+            content: 'â†';
+        }
+
+        [dir='rtl'] .slick-prev:before {
+            content: 'â†’';
+        }
+
+        .slick-next {
+            right: -25px;
+        }
+
+        [dir='rtl'] .slick-next {
+            right: auto;
+            left: -25px;
+        }
+
+        .slick-next:before {
+            content: 'â†’';
+        }
+
+        [dir='rtl'] .slick-next:before {
+            content: 'â†';
+        }
+
+        /* Dots */
+        .slick-dotted.slick-slider {
+            margin-bottom: 30px;
+        }
+
+        .slick-dots {
+            position: absolute;
+            bottom: -25px;
+
+            display: block;
+
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+            list-style: none;
+
+            text-align: center;
+        }
+
+        .slick-dots li {
+            position: relative;
+
+            display: inline-block;
+
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+            padding: 0;
+
+            cursor: pointer;
+        }
+
+        .slick-dots li button {
+            font-size: 0;
+            line-height: 0;
+
+            display: block;
+
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+
+            cursor: pointer;
+
+            color: transparent;
+            border: 0;
+            outline: none;
+            background: transparent;
+        }
+
+        .slick-dots li button:hover,
+        .slick-dots li button:focus {
+            outline: none;
+        }
+
+        .slick-dots li button:hover:before,
+        .slick-dots li button:focus:before {
+            opacity: 1;
+        }
+
+        .slick-dots li button:before {
+            font-family: 'slick';
+            font-size: 6px;
+            line-height: 20px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 20px;
+            height: 20px;
+
+            content: 'â€¢';
+            text-align: center;
+
+            opacity: .25;
+            color: black;
+
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .slick-dots li.slick-active button:before {
+            opacity: .75;
+            color: black;
+        }
+
+
+
+            {
+            /literal
+        }
+    </style>
+
+
+    <style type="text/css">
+        {
+            literal
+        }
+
+        .TilesRollover img:last-child {
+            display: none;
+        }
+
+        .TilesRollover:hover img:first-child {
+            display: none;
+        }
+
+        .TilesRollover:hover img:last-child {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .TilesOverlay {
+            cursor: pointer;
+        }
+
+        .TilesOverlay .slick-slide::before {
+            display: none;
+            float: left;
+            height: 100%;
+            min-height: 1px;
+        }
+
+
+        .slick-vertical .slick-slide ::before {
+            display: none;
+            float: left;
+            height: 100%;
+            min-height: 1px;
+        }
+
+            {
+            /literal
+        }
+    </style>
+
+
+
+
+
+    <style type="text/css">
+        {
+            literal
+        }
+
+
+
+
+        /* ////////////////////////
+	Join Button
+	////////////////////////// */
+
+        .submit_button_holder {
+            text-align: center;
+            padding: 0 25px 10px 25px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        #join-button {
+            border: 0px solid #fff;
+            box-shadow: 1px 1px 2px #000;
+            text-transform: none;
+            color: #FFFFFF;
+            font-size: 1.5em;
+            line-height: 50px;
+            height: 75px;
+            margin: 20px 0 10px 0;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            -webkit-appearance: none;
+            border-radius: 0;
+            background: #05EEFF;
+            background: -moz-linear-gradient(top, #464646 0%, #05EEFF 100%);
+            background: -webkit-linear-gradient(top, #464646 0%, #05EEFF 100%);
+            background: linear-gradient(to bottom, #464646 0%, #05EEFF 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464646', endColorstr='#05EEFF', GradientType=0);
+        }
+
+
+        #join-button:hover {
+            background: #05EEFF;
+            background: -moz-linear-gradient(top, #05EEFF 0%, #464646 100%);
+            background: -webkit-linear-gradient(top, #05EEFF 0%, #464646 100%);
+            background: linear-gradient(to bottom, #05EEFF 0%, #464646 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05EEFF', endColorstr='#464646', GradientType=0);
+        }
+
+
+
+            {
+            /literal
+        }
+    </style>
+
+
+
+
+
+    <!--
+
+	<style>
+	{literal}
+	input[type=checkbox] + label {
+	  display: block;
+	  margin: 0.2em;
+	  cursor: pointer;
+	  padding: 0.2em;
+
+	}
+
+	input[type=checkbox] {
+	  display: none;
+		zoom: 2;
+	}
+
+	input[type=checkbox] + label:before {
+	  content: "\2714";
+	  border: 0.1em solid #05EEFF;
+	  background-color: #028b95;
+	  border-radius: 0.2em;
+	  display: inline-block;
+	  width: 2em;
+	  height: 2em;
+	  padding-left: 0em;
+	  padding-bottom: 0em;
+	  margin-right: 0em;
+	  vertical-align: bottom;
+	  color: transparent;
+	  transition: .2s;
+				font-size: 1em;
+	}
+
+	input[type=checkbox] + label:active:before {
+	  transform: scale(1,1);
+	}
+
+	input[type=checkbox]:checked + label:before {
+	  background-color: #05EEFF;
+	  border-color: #05EEFF;
+	  color: #fff;
+		font-size: 1em;
+	}
+
+	input[type=checkbox]:disabled + label:before {
+	  transform: scale(1, 1);
+	  border-color: #05EEFF;
+	}
+
+	input[type=checkbox]:checked:disabled + label:before {
+	  transform: scale(1, 1);
+	  background-color: #05EEFF;
+	  border-color: #05EEFF;
+	}
+
+	{/literal}
+	</style>
+-->
+
+
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGG88K" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+    <div class="sliderLeftWrap">
+
+        <div class="sliderLeft">
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#"
+                        onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_1_stilettos-for-shanghai';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/231291/InitialTile/46307.jpg' width='100%'
+                            alt='Stilettos For Shanghai' title='Stilettos For Shanghai'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/231291/ActiveTile/46313.jpg' width='100%'
+                            alt='Stilettos For Shanghai' title='Stilettos For Shanghai'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#" onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_2_lazy-eye';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/218649/InitialTile/37651.jpg' width='100%'
+                            alt='Lazy Eye' title='Lazy Eye'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/218649/ActiveTile/37645.jpg' width='100%'
+                            alt='Lazy Eye' title='Lazy Eye'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#" onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_3_rift';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/228876/InitialTile/44250.jpg' width='100%'
+                            alt='Rift' title='Rift'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/228876/ActiveTile/44256.jpg' width='100%'
+                            alt='Rift' title='Rift'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#"
+                        onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_4_love-actually-sucks';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222656/InitialTile/40384.jpg' width='100%'
+                            alt='Love Actually... Sucks' title='Love Actually... Sucks'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222656/ActiveTile/40390.jpg' width='100%'
+                            alt='Love Actually... Sucks' title='Love Actually... Sucks'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#"
+                        onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_5_city-without-baseball';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222692/InitialTile/40132.jpg' width='100%'
+                            alt='City Without Baseball' title='City Without Baseball'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222692/ActiveTile/40138.jpg' width='100%'
+                            alt='City Without Baseball' title='City Without Baseball'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#" onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_6_kept-boy';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222662/InitialTile/40232.jpg' width='100%'
+                            alt='Kept Boy' title='Kept Boy'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222662/ActiveTile/40238.jpg' width='100%'
+                            alt='Kept Boy' title='Kept Boy'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#" onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_7_utopians';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222688/InitialTile/40336.jpg' width='100%'
+                            alt='Utopians' title='Utopians'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222688/ActiveTile/40342.jpg' width='100%'
+                            alt='Utopians' title='Utopians'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#" onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_8_positive';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/220573/InitialTile/40396.jpg' width='100%'
+                            alt='Positive' title='Positive'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/220573/ActiveTile/40402.jpg' width='100%'
+                            alt='Positive' title='Positive'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'><a href="#"
+                        onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_9_good-mourning-lucille';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222671/InitialTile/40169.jpg' width='100%'
+                            alt='Good Mourning Lucille' title='Good Mourning Lucille'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222671/ActiveTile/40175.jpg' width='100%'
+                            alt='Good Mourning Lucille' title='Good Mourning Lucille'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+
+
+
+
+        </div><!-- // sliderLeft -->
+
+    </div><!-- col -->
+
+    <div class="join_form_wrapper">
+
+        <img src="https://nakedsword.com/nakedsword_now/img/h_thirdparty_upsell_qreel_gift.jpg" width="100%">
+        <center>
+            <form action="upsellplus.php" method="POST">
+                <input type="hidden" name="site" value="{$smarty.request.site}">
+                <input type="hidden" name="siteid" value="{$smarty.request.siteid}">
+                <input type="hidden" name="siteids" value="{$smarty.request.siteids}">
+                <input type="hidden" name="username" value="{$smarty.request.username}">
+                <input type="hidden" name="memberid" value="{$smarty.request.memberid}">
+                <input type="hidden" name="member_subscription_id"
+                    value="{if !empty($smarty.request.member_subscription_id)}{$smarty.request.member_subscription_id}{/if}">
+                <input type="hidden" name="memberidx"
+                    value="{if !empty($smarty.request.memberidx)}{$smarty.request.memberidx}{/if}">
+                <input type="hidden" name="natssess" value="{$smarty.request.natssess}">
+                <input type="hidden" name="authstring" value="{$smarty.request.authstring}">
+                <input type="hidden" name="submit" value="1">
+                {if $smarty.request.member_extra}
+                {foreach from=$smarty.request.member_extra key=member_extra_key item=member_extra_val}
+                {if is_array($member_extra_val)}
+                {foreach from=$member_extra_val key=member_extra_key2 item=member_extra_val2}
+                <input type="hidden" name="member_extra[{$member_extra_key}][{$member_extra_key2}]"
+                    value="{$member_extra_val2}" />
+                {/foreach}
+                {else}
+                <input type="hidden" name="member_extra[{$member_extra_key}]" value="{$member_extra_val}" />
+                {/if}
+                {/foreach}
+                {/if}
+                <TABLE border=0 cellpadding=5 cellspacing=0 class="join_table">
+
+
+                    <TR>
+                        <TD class="join_header" colspan=3>
+                            <h3>REDEEM YOUR FREE MONTH NOW!</h3>
+                        </TD>
+                    </TR>
+
+                    {foreach from=$available_upsells key=upsellid item=upsell}
+                    {if $upsellid==4568}
+                    <tr>
+                        <td class="join_table_left" align="right">
+                            <input type="checkbox" name="upsellids[]" value="{$upsellid}" {if
+                                in_array($upsellid,$smarty.request.upsellids)}CHECKED{/if} />
+                        </td>
+
+                        <td class="join_table_center">
+                            <h3>Join Qreel.com now!</h3><em style="font-size: 75%;">(First month is FREE. Rebills at
+                                $9.95/mo.)</em>
+                            <!--
+	<strong>{$upsell.details.name}</strong>
+	{if $upsell.details.description}<br/><br/>{$upsell.details.description}{/if}
+	{if $upsell.details.disclaimer}<br/><br/>{$upsell.details.disclaimer}{/if}
+	-->
+                        </td>
+                        <td class="join_table_right"></td>
+                    </tr>
+                    {/if}
+                    {/foreach}
+
+                    <TR>
+                        <TD class="join_header" colspan=3>
+                            <h3>Please enter your NakedSword username/email to unlock Qreel!</h3>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD colspan="3" align="center">
+
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <TR>
+                                    <TD>
+                                        <div class="join_name">
+                                            <h3>EMAIL:&nbsp;</h3>
+                                        </div>
+                                    </TD>
+                                    <TD><input class="join_input" type="text" name="email"
+                                            value="{$smarty.get.email}">{if $failed}<span class="join_error"><br>This
+                                            E-Mail Address does not match the<br>one on file! Please try
+                                            again.</span>{/if}</TD>
+                                </TR>
+                            </tABLE>
+
+                        </TD>
+                    </TR>
+
+                    {if count($additionalFields)}
+                    {foreach from=$additionalFields item=field_name key=field_description}
+                    <TR>
+                        <TD class="join_name">{$field_description}:</TD>
+                        <TD class="join_value" colspan=2><input class="join_input" type="text" name="{$field_name}"
+                                value=""></TD>
+                    </TR>
+                    {/foreach}
+                    {/if}
+
+
+                    <TR>
+                        <TD class="join_footer" colspan="3" align="center"><input type="submit" value="Add Qreel!"
+                                ID="join-button"></tD>
+                    </TR>
+            </form>
+            </taBLE>
+
+
+
+
+
+        </center>
+
+        <img src="https://nakedsword.com/nakedsword_now/img/btm_thirdparty_upsell_qreel_gift.jpg" width="100%">
+
+
+
+    </div><!-- // col -->
+
+
+
+
+
+    <div class="sliderRightWrap">
+        <div class="sliderRight">
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#"
+                        onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_10_do-you-take-this-man';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222669/InitialTile/40144.jpg' width='100%'
+                            alt='Do You Take This Man' title='Do You Take This Man'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222669/ActiveTile/40150.jpg' width='100%'
+                            alt='Do You Take This Man' title='Do You Take This Man'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#"
+                        onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_11_i-am-happiness-on-earth';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/218647/InitialTile/37705.jpg' width='100%'
+                            alt='I Am Happiness On Earth' title='I Am Happiness On Earth'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/218647/ActiveTile/37711.jpg' width='100%'
+                            alt='I Am Happiness On Earth' title='I Am Happiness On Earth'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#" onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_12_charlie';"><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222682/InitialTile/40120.jpg' width='100%'
+                            alt='Charlie' title='Charlie'><img
+                            src='https://assets.nakedcdn.com/pictures/movies/222682/ActiveTile/40126.jpg' width='100%'
+                            alt='Charlie' title='Charlie'></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#" onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_4_sand-dollars';"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220315/InitialTile/39029.jpg" width="100%"
+                            alt="Sand Dollars" title="Sand Dollars"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220315/ActiveTile/39035.jpg" width="100%"
+                            alt="Sand Dollars" title="Sand Dollars"></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#" onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_5_gigola';"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220290/InitialTile/39197.jpg" width="100%"
+                            alt="Gigola" title="Gigola"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220290/ActiveTile/39203.jpg" width="100%"
+                            alt="Gigola" title="Gigola"></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#" onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_6_wasp';"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220316/InitialTile/38939.jpg" width="100%"
+                            alt="Wasp" title="Wasp"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220316/ActiveTile/38945.jpg" width="100%"
+                            alt="Wasp" title="Wasp"></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#" onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_7_you-and-i';"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220323/InitialTile/38927.jpg" width="100%"
+                            alt="You And I" title="You And I"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220323/ActiveTile/38933.jpg" width="100%"
+                            alt="You And I" title="You And I"></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#" onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_8_uncle-bob';"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220322/InitialTile/38951.jpg" width="100%"
+                            alt="Uncle Bob" title="Uncle Bob"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220322/ActiveTile/38957.jpg" width="100%"
+                            alt="Uncle Bob" title="Uncle Bob"></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+
+            <!-- slide -->
+            <div>
+                <div class='TilesRollover'>
+                    <a href="#"
+                        onclick="ga('send', 'event', 'button', 'click', 'FilmsMostWatched_9_such-good-people';"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220325/InitialTile/38987.jpg" width="100%"
+                            alt="Such Good People" title="Such Good People"><img
+                            src="https://assets.nakedcdn.com/pictures/movies/220325/ActiveTile/38993.jpg" width="100%"
+                            alt="Such Good People" title="Such Good People"></a>
+                </div>
+            </div>
+            <!-- // slide -->
+
+
+
+        </div><!-- // sliderRight -->
+
+    </div><!-- // col -->
+
+
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <!-- slick  -->
+    <script type='text/javascript' src='https://nakedsword.com/js/slick.js'></script>
+    <!-- slick  -->
+    <script type='text/javascript' src='https://nakedsword.com/js/videoslider.js'></script>
+
+    <script>
+        { literal }
+        $(document).ready(function () {
+            // slick carousel
+            $('.sliderLeft').slick({
+                dots: false,
+                arrows: false,
+                vertical: true,
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                verticalSwiping: true,
+                autoplay: true,
+            });
+        });
+        {
+            /literal}
+    </script>
+
+
+    <script>
+            { literal }
+            $(document).ready(function () {
+                // slick carousel
+                $('.sliderRight').slick({
+                    dots: false,
+                    arrows: false,
+                    vertical: true,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    verticalSwiping: true,
+                    autoplay: true,
+                });
+            });
+            {
+                /literal}
+    </script>
+
+
+    {if $smarty.server.REMOTE_ADDR =="54.85.107.165"}{debug}{/if}
+</body>
+
+</html>
+
+{elseif $smarty.request.upsellid==4578}
+{*
+
+FUNNNN SIZEEEEE BOYYYYYYSSSSSSSSS
+
+5873 - added $additionalFields to the form
+
+6462 - added auth string
+- corrected hidden form fields
+
+7001 - Added Proper HTML
+
+13098 - upsellplus for inactive member
+
+13307 - add support for multi-dimensional member_extra
+
+NATS-682 - escaped array keys from the member_extra array before displaying them
+
+NATS-928 - added autocamp hidden field to the main form
+
+NATS-1401 - added support for passing in approval and denial urls
+- added support for passing in approval post and denial post urls
+- updated the default value of the email field and made this field required
+
+NATS-1691 - corrected pre-checked upsells based on the passed in values (upsellid or upsellids)
+
+*}
+<html>
+
+<head>
+    <title>Get your exclusive offer now!!</title>
+
+
+
+
+    {literal}
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+                    w[l] = w[l] || []; w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    }); var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-WGG88K');</script>
+    <!-- End Google Tag Manager -->
+
+    {/literal}
+
+
+
+    {literal}
+    <!-- Google Analytics Join.NakedSword - updated rgate code oct28 2020 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-856518-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments) };
+                gtag('js', new Date());
+                gtag('config', 'UA-856518-1', {
+                    'linker': {
+                        'accept_incoming': true,
+                        'domains': ['nakedsword.com', 'join.nakedsword.com', 'rocketgate.com']
+                    }
+                });
+    </script>
+
+
+
+    {/literal}
+
+
+    {literal}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://nakedsword.com/nakedsword_now/ns2021look-nats-upsell-generic.css" rel="stylesheet">
+    {/literal}
+
+
+
+
+    <script language="javascript" src="../jscript/jquery.js"></script>
+    <script language="javascript" src="../jscript/site.js"></script
+
+
+
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGG88K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="UpsellPageContain">
+
+<div class="nslogoheader"><img alt="Logo" src="https://spotlight.nakedcdn.com/ns-logos-svg/NakedSword_white.svg" class="logo"></div>
+
+<div class="UpsellImgH"><img src="https://assets.nakedsword.com/pictures/banners/1665/77113.jpg" width="100%:" height="auto"></div>
+
+<div class="PageLeft">
+
+
+&nbsp;
+
+
+</div><!-- // PageLeft -->
+
+	<div class="PageMiddle">
+
+	<div class="join_form_wrapper">
+
+<form id="join-form" action="upsellplus.php" method="POST">
+<input type="hidden" name="site" value="{$smarty.request.site}">
+<input type="hidden" name="siteid" value="{$smarty.request.siteid}">
+<input type="hidden" name="siteids" value="{$smarty.request.siteids}">
+<input type="hidden" name="username" value="{$smarty.request.username}">
+<input type="hidden" name="memberid" value="{$smarty.request.memberid}">
+<input type="hidden" name="member_subscription_id" value="{if !empty($smarty.request.member_subscription_id)}{$smarty.request.member_subscription_id}{/if}">
+<input type="hidden" name="memberidx" value="{if !empty($smarty.request.memberidx)}{$smarty.request.memberidx}{/if}">
+<input type="hidden" name="natssess" value="{$smarty.request.natssess}">
+<input type="hidden" name="authstring" value="{$smarty.request.authstring}">
+<input type="hidden" name="autocamp" value="{$smarty.request.autocamp}">
+<input type="hidden" name="submit" value="1">
+	{if $smarty.request.member_extra}
+	{foreach from=$smarty.request.member_extra key=member_extra_key item=member_extra_val}
+		{if is_array($member_extra_val)}
+			{foreach from=$member_extra_val key=member_extra_key2 item=member_extra_val2}
+				<input type="hidden" name="member_extra[{$member_extra_key}][{$member_extra_key2}]" value="{$member_extra_val2}"/>
+			{/foreach}
+		{else}
+			<input type="hidden" name="member_extra[{$member_extra_key}]" value="{$member_extra_val}"/>
+		{/if}
+	{/foreach}
+	{/if}
+	<TABLE border=0 cellpadding=5 cellspacing=0 class="join_table">
+
+
+	<TR><TD class="join_header" colspan=3><h3>GET SOME FUN SIZE BOYS!</h3></TD></TR>
+
+	{foreach from=$available_upsells key=upsellid item=upsell}
+{if $upsellid==4578}
+	<tr>
+		<td class="join_table_left" align="right">
+			<input type="checkbox" name="upsellids[]" value="{$upsellid}" {if in_array($upsellid,$smarty.request.upsellids)}CHECKED{/if}/>
+	</td>
+
+<td  class="join_table_center">
+		<h3>Join FunSizeBoys.com now!</h3><!--<em style="font-size: 75%;">(First month is FREE. Rebills at $9.95/mo.)</em>-->
+		<!--
+	<strong>{$upsell.details.name}</strong>
+	{if $upsell.details.description}<br/><br/>{$upsell.details.description}{/if}
+	{if $upsell.details.disclaimer}<br/><br/>{$upsell.details.disclaimer}{/if}
+	-->
+	</td>
+<td  class="join_table_right"></td>
+ </tr>
+{/if}
+	{/foreach}
+
+	<TR><TD class="join_header" colspan=3><h3>Please enter your NakedSword username/email to unlock Fun Size Boys!</h3></TD></TR>
+	<TR>
+		<TD colspan="3" align="center">
+
+			<table border="0" cellpadding="0" cellspacing="0">
+				<TR><TD>
+			<div class="join_name"><h3>EMAIL:&nbsp;</h3></div></TD><TD><input class="join_input" type="text" name="email" value="{$smarty.get.email}"><!--{if $failed}<span class="join_error"><br>This E-Mail Address does not match the<br>one on file! Please try again.</span>{/if}--></TD></TR></tABLE>
+
+		</TD>
+	</TR>
+
+	{if count($additionalFields)}
+		{foreach from=$additionalFields item=field_name key=field_description}
+			<TR>
+				<TD class="join_name">{$field_description}:</TD>
+				<TD class="join_value" colspan=2><input class="join_input" type="text" name="{$field_name}" value=""></TD>
+			</TR>
+		{/foreach}
+	{/if}
+
+
+	<TR><TD class="join_footer" colspan="3" align="center">
+        
+    
+    
+							
+
+                                    <div class="submit_button_holder">
+				<input ID='join-button' class='join-button' type='submit' value='Add Fun Size Boys!'/>
+<div style="width:100%; text-align:center;">
+<img src="https://nakedsword.com/nakedsword_now/loading-line-336w.svg" id="waiter" style="display: inline-block; z-index: 10; position: relative; margin: 0 auto; width: 55%; height: auto;  visibility: hidden;">
+</div>
+							    </div>
+
+								
+    
+    
+  </tD></TR>
+	</form>
+	</taBLE>
+</div><!-- join_form_wrapper -->
+
+
+<!-- upsell var
+{$upsell.details.name}</strong>
+{if $upsell.details.description}<br/><br/>{$upsell.details.description}{/if}
+{if $upsell.details.disclaimer}<br/><br/>{$upsell.details.disclaimer}{/if}
+-->
+	
+
+
+
+
+</div><!-- // PageMiddle -->
+
+
+
+
+
+<div class="PageRight">
+ 
+
+&nbsp;		
+
+
+</div><!-- // PageRight -->
+
+
+</div><!-- end UpsellPageContain -->
+
+
+
+{literal}
+<script type="text/javascript">
+            $('#join-form').submit(function () {
+                $('#waiter').css('visibility', 'visible');
+            });
+</script>
+    {/literal}
+
+
+    </body>
+
+</html>
+
+{else}
+<html>
+{*
+
+NO UPSELL AVAILABLE
+
+*}
+<html>
+
+<head>
+    <title>Get your exclusive offer now!!</title>
+
+
+
+
+    {literal}
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+                    w[l] = w[l] || []; w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    }); var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-WGG88K');</script>
+    <!-- End Google Tag Manager -->
+
+    {/literal}
+
+
+
+    {literal}
+    <!-- Google Analytics Join.NakedSword - updated rgate code oct28 2020 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-856518-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments) };
+                gtag('js', new Date());
+                gtag('config', 'UA-856518-1', {
+                    'linker': {
+                        'accept_incoming': true,
+                        'domains': ['nakedsword.com', 'join.nakedsword.com', 'rocketgate.com']
+                    }
+                });
+    </script>
+
+
+
+    {/literal}
+
+
+    {literal}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://nakedsword.com/nakedsword_now/ns2021look-nats-upsell-generic.css" rel="stylesheet">
+    {/literal}
+
+
+    <style type="text/css">
+        {
+            literal
+        }
+
+        < !-- .join_table {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #000000;
+            width: 400px;
+            border: thin solid #000000;
+            padding: 5px;
+            margin: 0px;
+        }
+
+        .join_name {
+            font-weight: bold;
+            text-align: right;
+            border: none;
+        }
+
+        .join_value {
+            text-align: left;
+            border: none;
+        }
+
+        .join_error {
+            color: #EE0000;
+        }
+
+        .join_header {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            font-family: 'Oswald';
+        }
+
+        .join_footer {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+        }
+
+        .join_input {}
+
+        .join_select {}
+
+        .join_button {}
+
+        //-->
+            {
+            /literal
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGG88K" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="UpsellPageContain">
+
+        <div class="nslogoheader"><img alt="Logo" src="https://spotlight.nakedcdn.com/ns-logos-svg/NakedSword_white.svg"
+                class="logo"></div>
+
+        <div class="UpsellImgH"><img src="https://assets.nakedsword.com/pictures/banners/1665/77113.jpg" width="100%:"
+                height="auto"></div>
+
+        <div class="PageLeft">
+
+
+            &nbsp;
+
+
+        </div><!-- // PageLeft -->
+
+        <div class="PageMiddle" style="color: #000000; text-align: center;">
+            <h3 style="color: #000000;">Sorry</h3>
+
+            no upsells available.
+
+            <!-- upsell var
+{$upsell.details.name}</strong>
+{if $upsell.details.description}<br/><br/>{$upsell.details.description}{/if}
+{if $upsell.details.disclaimer}<br/><br/>{$upsell.details.disclaimer}{/if}
+-->
+
+
+
+
+
+        </div><!-- // PageMiddle -->
+
+
+
+
+
+        <div class="PageRight">
+
+
+            &nbsp;
+
+
+        </div><!-- // PageRight -->
+
+
+    </div><!-- end UpsellPageContain -->
+
+
+
+
+</body>
+
+</html>
+{/if}
+
+
+<!--{debug}-->

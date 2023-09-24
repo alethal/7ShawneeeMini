@@ -1,0 +1,833 @@
+/* Last updated 2019-03-15 */
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:100,300,700);
+
+* {
+	font-family: 'Oswald', Verdana, Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+body { background-color:#434343; }
+
+a:link { color: #ff1f00;  text-decoration: none;}
+a:visited { color: #ffffff; text-decoration: none;}
+a:hover { color: #ffffff; text-decoration: underline; }
+a:active { color: #FF0000; text-decoration: underline; }
+
+/* branded header */
+
+#masthead { width: 100%; height: auto; display: block; padding: none;	background: #282828; }
+
+
+#mainHeader { height: auto; width: 100%; display: block; background-color: transparent;
+  padding: .15em 0 .15em 0;}
+
+#logoHeader {
+    margin: 0 auto;
+    top: 10px;
+    padding: 20px 0 0 0;
+    line-height: .05em;
+    background-image: url(https://spotlight.nakedcdn.com/huntformen/img/huntformen-logo.svg);
+    background-size: 650px 82px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-attachment: scroll;
+    background-color: transparent;
+    display: block;
+    text-align: center;
+    height: 5px;
+    height: auto;
+    height: 100px;
+}
+
+/* seclect language pulldown option */
+#logoHeader select, #currency { font-size: .75em; float: right; padding: .4em; border: none; color: #fff; margin-right: 2%; height: 2.75em; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -khtml-border-radius: 5px; -moz-appearance: none; -webkit-appearance: none;
+	appearance: none;
+	background: rgba(24,24,24,0.4) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgaWQ9IkxheWVyXzEiICAgZGF0YS1uYW1lPSJMYXllciAxIiAgIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIiAgIHZlcnNpb249IjEuMSIgICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkxIHIxMzcyNSIgICBzb2RpcG9kaTpkb2NuYW1lPSJkb3dubG9hZC5zdmciPiAgPG1ldGFkYXRhICAgICBpZD0ibWV0YWRhdGE0MjAyIj4gICAgPHJkZjpSREY+ICAgICAgPGNjOldvcmsgICAgICAgICByZGY6YWJvdXQ9IiI+ICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4gICAgICAgIDxkYzp0eXBlICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPiAgICAgIDwvY2M6V29yaz4gICAgPC9yZGY6UkRGPiAgPC9tZXRhZGF0YT4gIDxzb2RpcG9kaTpuYW1lZHZpZXcgICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIgICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiAgICAgYm9yZGVyb3BhY2l0eT0iMSIgICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiICAgICBncmlkdG9sZXJhbmNlPSIxMCIgICAgIGd1aWRldG9sZXJhbmNlPSIxMCIgICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIgICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMjciICAgICBpZD0ibmFtZWR2aWV3NDIwMCIgICAgIHNob3dncmlkPSJmYWxzZSIgICAgIGlua3NjYXBlOnpvb209Ijg0LjMiICAgICBpbmtzY2FwZTpjeD0iMi40NzQ5OTk5IiAgICAgaW5rc2NhcGU6Y3k9IjUiICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy15PSIyNyIgICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJMYXllcl8xIiAvPiAgPGRlZnMgICAgIGlkPSJkZWZzNDE5MCI+ICAgIDxzdHlsZSAgICAgICBpZD0ic3R5bGU0MTkyIj4uY2xzLTJ7ZmlsbDojNDQ0O308L3N0eWxlPiAgPC9kZWZzPiAgPHRpdGxlICAgICBpZD0idGl0bGU0MTk0Ij5hcnJvd3M8L3RpdGxlPiAgPHBvbHlnb24gICAgIGNsYXNzPSJjbHMtMiIgICAgIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIiAgICAgaWQ9InBvbHlnb240MTk4IiAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MSIgLz48L3N2Zz4=) no-repeat 97% 40%; }
+
+
+#logoHeader select:focus, #logoHeader select option:active  {
+outline: none; border: none; }
+
+#logoHeader select option { border: none; background-color: #000; font-size: .95em;}
+
+/* product */
+#purchaseInfoArea { height: auto; width: 100%; padding: .75em 0 .75em 0; font-size: 1.25em; text-align: center; background: rgb(255, 31, 0); background: rgba(255, 31, 0, 0.8);}
+
+
+#purchaseInfo { text-align: center; color: #fff; font-weight: 400; font-size: 1.25em;}
+
+#divproddesc { font-size: 1.25em; font-weight: 200; }
+
+/* upsell pull down full size */
+.divxsell select { font-size: .65em; padding: 3px 5px 3px 5px; margin-top: 5px; border-color: #666; background: rgb(24, 24, 24); background: rgba(24, 24, 24, 0.5); color: rgb(255,255,255); color: rgba(255,255,255,0.65); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -khtml-border-radius: 5px; -moz-appearance: none; -webkit-appearance: none; background: rgba(24, 24, 24, 0.5) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgaWQ9IkxheWVyXzEiICAgZGF0YS1uYW1lPSJMYXllciAxIiAgIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIiAgIHZlcnNpb249IjEuMSIgICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkxIHIxMzcyNSIgICBzb2RpcG9kaTpkb2NuYW1lPSJkb3dubG9hZC5zdmciPiAgPG1ldGFkYXRhICAgICBpZD0ibWV0YWRhdGE0MjAyIj4gICAgPHJkZjpSREY+ICAgICAgPGNjOldvcmsgICAgICAgICByZGY6YWJvdXQ9IiI+ICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4gICAgICAgIDxkYzp0eXBlICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPiAgICAgIDwvY2M6V29yaz4gICAgPC9yZGY6UkRGPiAgPC9tZXRhZGF0YT4gIDxzb2RpcG9kaTpuYW1lZHZpZXcgICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIgICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiAgICAgYm9yZGVyb3BhY2l0eT0iMSIgICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiICAgICBncmlkdG9sZXJhbmNlPSIxMCIgICAgIGd1aWRldG9sZXJhbmNlPSIxMCIgICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIgICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMjciICAgICBpZD0ibmFtZWR2aWV3NDIwMCIgICAgIHNob3dncmlkPSJmYWxzZSIgICAgIGlua3NjYXBlOnpvb209Ijg0LjMiICAgICBpbmtzY2FwZTpjeD0iMi40NzQ5OTk5IiAgICAgaW5rc2NhcGU6Y3k9IjUiICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy15PSIyNyIgICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJMYXllcl8xIiAvPiAgPGRlZnMgICAgIGlkPSJkZWZzNDE5MCI+ICAgIDxzdHlsZSAgICAgICBpZD0ic3R5bGU0MTkyIj4uY2xzLTJ7ZmlsbDojNDQ0O308L3N0eWxlPiAgPC9kZWZzPiAgPHRpdGxlICAgICBpZD0idGl0bGU0MTk0Ij5hcnJvd3M8L3RpdGxlPiAgPHBvbHlnb24gICAgIGNsYXNzPSJjbHMtMiIgICAgIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIiAgICAgaWQ9InBvbHlnb240MTk4IiAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MSIgLz48L3N2Zz4=) no-repeat 97% 40%;}
+
+.divxsell select option { background: rgb(24, 24, 24); background: rgba(24, 24, 24, 0.5); color: rgb(255,255,255); color: rgba(255,255,255,0.65);}
+
+
+/* form styles */
+form { width: 100%;}
+
+#formWrapper { padding: .15em 0 1.75em 0;}
+
+#formWrapper #header { height: 1.5em; margin-bottom: .75em;}
+
+#formWrapper #header h2 { color: #efefef; font-size: 1em; margin-left: 1.2em;}
+
+
+#formWrapper #header {
+  background: url(https://spotlight.nakedcdn.com/huntformen/img/secure_lock_offw.png) no-repeat left top/auto 20px !important;
+  height: 20px;
+  margin-bottom: 12px;
+  width: 98%;
+  float: left;
+  height: auto;
+}
+
+#rocketpay_remember {
+  color: #efefef;
+  font-weight: 700;
+  font-size: 14px;
+  float: right;
+  margin-top: 5px;
+}
+
+#rocketpay_link {
+  display: none;
+  width: 50%;
+  float: right;
+  clear: right;
+  margin: -42px 0 7px 0;
+  color: #ffffff;
+}
+
+
+#rocketpay_help_img {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(https://spotlight.nakedcdn.com/trentonducati/trentonducati_now/trenton-rocketmemb-info-grey.svg) no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    padding-left: 16px;
+}
+
+.labelCheckbox { color: #cccccc; }
+
+/* form elements */
+.float-container, .nofloat-container { height: 3em; margin-bottom: .5em; background-color:#ffffff;}
+
+/*non pull down labels */
+.float-container label { line-height: .75em; font-size: 1em;}
+
+.float-container input { font-size: 1em; padding: .75em 0 .7em 0; text-indent: .4em;}
+
+/* pull down labels */
+.nofloat-container label { font-size: 1em; line-height: 0em; margin: 0em; padding: 0em; left: .75em;}
+
+/* pull downs */
+#divexpire select, #divcountry select, #divstate select { height: 1.5em; font-size: .85em;}
+
+/* tos area */
+
+#tos { color: #cccccc; }
+
+#divtos { margin: 10px 0 10px 0; font-size: .95em;}
+
+/* upsell and rebill btm area text */
+#div_rebill, #desc, #footer, #divverifinbypass { margin: 0; font-size: .75em; color: #cccccc; font-weight: 200;}
+
+.descriptor { margin: 0 0 2px 0; font-weight: 400; font-style: italic;  }
+
+.divxsell { margin-top: 0px;}
+
+/* submit button */
+
+#divsubmit input { display: inline-block; backgrouround:rgb(0,0,0); background: rgba(0,0,0,0.99); color: #e93e25; font-size: 1.5em;	font-weight: 200; text-transform: uppercase; padding: .75em; border: none; width: 60%; cursor: pointer; -moz-border-radius: 5px;	-webkit-border-radius: 5px;	-khtml-border-radius: 5px; }
+
+#divsubmit input:hover { font-weight: 600; background-color: #ffffff; opacity: .9; color: #000000;}
+
+/* /////////////////// unchanged /////////////
+#formWrapper #header {
+	background: url("https://dev-secure.rocketgate.com/hp/images/secure_lock_blue.png") no-repeat left top/auto 20px;
+	height: 20px;
+	margin-bottom: 12px;
+	width: 98%;
+	float:  left;
+	height:  auto;
+}
+*/
+
+/*
+#formWrapper #header h2 {
+	color: #2471c1;
+	font-size: 20px;
+	margin-left: 22px;
+	text-transform: uppercase;
+	float: left;
+}
+
+#rocketpay_emember  {
+	color: #2471c1;
+	font-weight: bold;
+	font-size: 14px;
+	float: right;
+	margin-top: 5px;
+}
+
+#rocketpay_help_img {
+ 	color: #999;
+	margin-left: 5px;
+	float: right;
+	width: 16px;
+	height: 16px;
+}
+
+#rocketpay_link {
+	display: none;
+	width: 50%;
+	float: right;
+	clear: right;
+	margin: 2px 0 7px 0;
+}
+
+#rocketpay_link p {
+	display: block;
+	font-size: 12px;
+	color: #888;
+
+}
+
+
+.float-container input {
+  border: none;
+  font-size: 16px;
+  outline: 0;
+  padding: 15px 0 10px 0;
+  width: 100%;
+  text-indent: 8px;
+}
+.float-container label {
+  left: 8px;
+  font-size: 16px;
+  line-height: 16px;
+  position: absolute;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: translate(0, 16px) scale(1);
+          transform: translate(0, 16px) scale(1);
+  transition: all .1s ease-in-out;
+}
+.float-container.active label {
+  -webkit-transform: translate(0, 6px) scale(0.75);
+          transform: translate(0, 6px) scale(0.75);
+	color: #777;
+}
+
+.nofloat-container label {
+	font-size: 12px;
+	line-height: 16px;
+	color: #777;
+    left: 8px;
+    position: relative;
+}
+
+#divinputs {
+	float: left;
+      width: 100%;
+}
+
+#divemail, #divcardno {
+	width: 98%;
+}
+
+#cardnoImages {
+	display: block;
+	position: absolute;
+	top: 12px;
+	right: 10px;
+}
+
+#divexpire select, #divcountry select, #divstate select {
+	border: none;
+	outline: none;
+	height: 23px;
+	max-width: 100%;
+}
+
+#expire_year, #expire_month {
+	width: 50%;
+	float: left;
+    text-indent: 5px;
+}
+
+#state, #country {
+	width: 100%;
+    text-indent: 4px;
+}
+
+#divtos {
+	display: block;
+	float: left;
+	clear: left;
+	margin-top: 15px;
+	text-align: center;
+	width: 98%;
+}
+
+#div_rebill, #desc, #footer, #divverifinbypass {
+	float: left;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 12px;
+	color: #777;
+	width: 98%;
+}
+
+
+/* /////////////////// end unchanged /////////////
+
+/* rocketpay login */
+
+/* /////////////////// unchanged /////////////
+
+#divverifidescription {
+    margin-top: 25px;
+    width: 98%;
+}
+
+#divverifidescription p:first-of-type{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#divpin {
+    margin-top: 15px;
+}
+
+#footer::first-line {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#footer {
+    margin-top: 30px;
+}
+
+.divxsell {
+    margin-top: 5px;
+}
+
+#divsubmit {
+	float: left;
+	text-align: center;
+	margin-top: 15px;
+	width: 98%;
+}
+
+/*
+#divsubmit input {
+	display: inline-block;
+	background-color: #76c24b;
+	color: #fff;
+	font-size: 22px;
+	font-weight: bold;
+	padding: 15px;
+	border: none;
+	width: 50%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* /////////////////// END unchanged ///////////// */
+
+
+
+
+/* /////////////////// unchanged /////////////
+
+#divsubmit input:hover {
+	background-color: rgba(137,147,162,0.99);
+
+	opacity: 0.9;
+}
+
+form input.error, form select.error {
+    border: 1px solid #FF0000;
+    background: url(https://dev-secure.rocketgate.com/hp/images/alert.svg) no-repeat #ffa8a2;
+    background-position: right 10px center !important;
+}
+
+form #errorMSG {
+    color: #ff0000;
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 5px 0 0 0;
+}
+
+form input.good, form select.good {
+    background: url(https://dev-secure.rocketgate.com/hp/images/alert-green.svg) no-repeat !important;
+    background-position: right 10px center !important;
+    border: solid 1px #00b44d;
+}
+
+select:focus, option:focus, input:focus:not([type="submit"]) {
+    outline: none;
+    border: solid 1px #00b44d;
+}
+
+#loading, #success-checkmark {
+    display: block;
+    width: 98%;
+    height: 200px;
+}
+
+#loading {
+    background: url("https://dev-secure.rocketgate.com/hp//images/loading_circle.gif") no-repeat center center/auto 200px;
+}
+
+#success-checkmark {
+    background: url("https://dev-secure.rocketgate.com/hp/images/success.png") no-repeat center center/auto 200px;
+}
+
+#successLink p {
+    text-align: center;
+    margin-top: 25px;
+}
+
+#successLink p:first-line {
+    font-weight: bold;
+}
+
+#cvv_info {
+      background-image: url("https://dev-secure.rocketgate.com/hp/images/cvv-help.svg");
+      background-size: auto;
+      display: block;
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      height: 20px;
+      width: 20px;
+}
+
+#cvv_info .cvv_image {
+    position: absolute;
+    bottom: 140%;
+    right: -8px;
+    display: flex;
+    align-items: center;
+    transition: opacity .5s ease;
+    opacity: 0;
+    background-color: #808080;
+            border-radius: 5px;
+    padding: 8px 8px;
+}
+
+#cvv_info .cvv_image:after {
+    content: '';
+    top: 100%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: .5em solid transparent;
+    border-right: .5em solid transparent;
+    border-top: .5em solid #808080;
+    position: absolute;
+}
+#cvv_info:hover .cvv_image {
+    opacity: 1;
+}
+/* /////////////////// END unchanged ///////////// */
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////
+768px
+///////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+				@media (max-width: 768px) {
+
+						body { font-size: 14px; }
+
+						#mainHeader { height: auto; width: 100%; display: block; background-color: transparent; padding: 0em 0 0em 0;}
+
+						#logoHeader {
+								background: url("https://spotlight.nakedcdn.com/huntformen/img/huntformen_rocketgateresponsive.png") no-repeat center top/auto 40px; height: 40px; }
+
+						/*
+						#logoHeader { margin: 0em; padding: .15em 0 0 0; 	line-height: .05em; background-image: url(https://spotlight.nakedcdn.com/nakedsword/img/logo.png); background-size: 262px 55px; background-repeat: no-repeat; background-position: top center; background-attachment: scroll; background-color: transparent; width: 100%; height: 55px;}
+						*/
+
+						/* seclect language pulldown option */
+						#logoHeader select, #currency { font-size: .75em; float: right; padding: .4em; border: none; color: #fff; margin-right: 2%; height: 2.75em; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -khtml-border-radius: 5px; -moz-appearance: none; -webkit-appearance: none;
+							appearance: none;
+							background: rgba(24,24,24,0.4) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgaWQ9IkxheWVyXzEiICAgZGF0YS1uYW1lPSJMYXllciAxIiAgIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIiAgIHZlcnNpb249IjEuMSIgICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkxIHIxMzcyNSIgICBzb2RpcG9kaTpkb2NuYW1lPSJkb3dubG9hZC5zdmciPiAgPG1ldGFkYXRhICAgICBpZD0ibWV0YWRhdGE0MjAyIj4gICAgPHJkZjpSREY+ICAgICAgPGNjOldvcmsgICAgICAgICByZGY6YWJvdXQ9IiI+ICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4gICAgICAgIDxkYzp0eXBlICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPiAgICAgIDwvY2M6V29yaz4gICAgPC9yZGY6UkRGPiAgPC9tZXRhZGF0YT4gIDxzb2RpcG9kaTpuYW1lZHZpZXcgICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIgICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiAgICAgYm9yZGVyb3BhY2l0eT0iMSIgICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiICAgICBncmlkdG9sZXJhbmNlPSIxMCIgICAgIGd1aWRldG9sZXJhbmNlPSIxMCIgICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIgICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMjciICAgICBpZD0ibmFtZWR2aWV3NDIwMCIgICAgIHNob3dncmlkPSJmYWxzZSIgICAgIGlua3NjYXBlOnpvb209Ijg0LjMiICAgICBpbmtzY2FwZTpjeD0iMi40NzQ5OTk5IiAgICAgaW5rc2NhcGU6Y3k9IjUiICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy15PSIyNyIgICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJMYXllcl8xIiAvPiAgPGRlZnMgICAgIGlkPSJkZWZzNDE5MCI+ICAgIDxzdHlsZSAgICAgICBpZD0ic3R5bGU0MTkyIj4uY2xzLTJ7ZmlsbDojNDQ0O308L3N0eWxlPiAgPC9kZWZzPiAgPHRpdGxlICAgICBpZD0idGl0bGU0MTk0Ij5hcnJvd3M8L3RpdGxlPiAgPHBvbHlnb24gICAgIGNsYXNzPSJjbHMtMiIgICAgIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIiAgICAgaWQ9InBvbHlnb240MTk4IiAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MSIgLz48L3N2Zz4=) no-repeat 97% 40%; }
+
+
+						#logoHeader select:focus, #logoHeader select option:active  {
+						outline: none; border: none; }
+
+						#logoHeader select option { border: none; backgrouround:rgb(51,51,51); background: rgba(51,51,51,0.99);
+						font-size: .95em;}
+
+						/* product */
+						#purchaseInfoArea { height: auto; width: 100%; padding: .75em 0 .75em 0; font-size: 1.25em; text-align: center; background: rgb(255, 31, 0); background: rgba(255, 31, 0, 0.8);}
+
+
+						#purchaseInfo { text-align: center; color: #fff; font-weight: 400; font-size: 1.25em;}
+
+						#divproddesc { font-size: 1.25em; font-weight: 200; }
+
+						/* upsell pull down full size */
+						.divxsell select { font-size: .65em; padding: 3px 5px 3px 5px; margin-top: 5px; border-color: #666; background:  rgb(24, 24, 24); background: rgba(24, 24, 24, 0.5); color: rgb(255,255,255); color: rgba(255,255,255,0.65); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -khtml-border-radius: 5px; -moz-appearance: none; -webkit-appearance: none; background: rgba(24, 24, 24, 0.5) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgaWQ9IkxheWVyXzEiICAgZGF0YS1uYW1lPSJMYXllciAxIiAgIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIiAgIHZlcnNpb249IjEuMSIgICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkxIHIxMzcyNSIgICBzb2RpcG9kaTpkb2NuYW1lPSJkb3dubG9hZC5zdmciPiAgPG1ldGFkYXRhICAgICBpZD0ibWV0YWRhdGE0MjAyIj4gICAgPHJkZjpSREY+ICAgICAgPGNjOldvcmsgICAgICAgICByZGY6YWJvdXQ9IiI+ICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4gICAgICAgIDxkYzp0eXBlICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPiAgICAgIDwvY2M6V29yaz4gICAgPC9yZGY6UkRGPiAgPC9tZXRhZGF0YT4gIDxzb2RpcG9kaTpuYW1lZHZpZXcgICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIgICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiAgICAgYm9yZGVyb3BhY2l0eT0iMSIgICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiICAgICBncmlkdG9sZXJhbmNlPSIxMCIgICAgIGd1aWRldG9sZXJhbmNlPSIxMCIgICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIgICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMjciICAgICBpZD0ibmFtZWR2aWV3NDIwMCIgICAgIHNob3dncmlkPSJmYWxzZSIgICAgIGlua3NjYXBlOnpvb209Ijg0LjMiICAgICBpbmtzY2FwZTpjeD0iMi40NzQ5OTk5IiAgICAgaW5rc2NhcGU6Y3k9IjUiICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy15PSIyNyIgICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJMYXllcl8xIiAvPiAgPGRlZnMgICAgIGlkPSJkZWZzNDE5MCI+ICAgIDxzdHlsZSAgICAgICBpZD0ic3R5bGU0MTkyIj4uY2xzLTJ7ZmlsbDojNDQ0O308L3N0eWxlPiAgPC9kZWZzPiAgPHRpdGxlICAgICBpZD0idGl0bGU0MTk0Ij5hcnJvd3M8L3RpdGxlPiAgPHBvbHlnb24gICAgIGNsYXNzPSJjbHMtMiIgICAgIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIiAgICAgaWQ9InBvbHlnb240MTk4IiAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MSIgLz48L3N2Zz4=) no-repeat 97% 40%;}
+
+						.divxsell select option { background: rgb(24, 24, 24); background: rgba(24, 24, 24, 0.5); color: rgb(255,255,255); color: rgba(255,255,255,0.65);}
+
+						/* form styles */
+						form { width: 100%; padding: 0px; margin: 0px; }
+
+						#formWrapper { padding: .15em 0 1.75em 0;}
+
+						#formWrapper #header { height: 1.5em; margin-bottom: .75em;}
+
+						#formWrapper #header h2 { color: #2471c1; font-size: 1em; margin-left: 1.2em;}
+
+						/* form elements */
+						.float-container, .nofloat-container { height: 3em; margin-bottom: .5em; background-color:#ffffff;}
+
+						/*non pull down labels */
+						.float-container label { line-height: .75em; font-size: 1em;}
+
+						.float-container input { font-size: 1em; padding: .75em 0 .7em 0; text-indent: .4em;}
+
+						/* pull down labels */
+						.nofloat-container label { font-size: 1em; line-height: 0em; margin: 0em; padding: 0em; left: .75em;}
+
+						/* pull downs */
+						#divexpire select, #divcountry select, #divstate select { height: 1.5em; font-size: .85em;}
+
+						/* tos area */
+						#divtos { margin: 10px 0 10px 0; font-size: .95em;}
+
+						/* upsell and rebill btm area text */
+						#div_rebill, #desc, #footer, #divverifinbypass { margin: 0; font-size: .75em; color: #cccccc; font-weight: 200;}
+
+						.descriptor { margin: 0 0 2px 0; font-weight: 400; font-style: italic;  }
+
+						.divxsell { margin-top: 0px;}
+
+						/* submit button */
+
+						#divsubmit input { display: inline-block; backgrouround:rgb(219,219,219); background: rgba(219,219,219,0.99); color: #000; font-size: 1.5em;	font-weight: 200; text-transform: uppercase; padding: .75em; border: none; width: 60%; cursor: pointer; -moz-border-radius: 5px;	-webkit-border-radius: 5px;	-khtml-border-radius: 5px; }
+
+						#divsubmit input:hover { font-weight: 600; background-color: #76c24b; opacity: .9; }
+
+
+
+
+
+				/* /////////////////// unchanged /////////////
+
+					.pageWrapper {
+					  width: 96%;
+					  margin: 0 1% 0 3%;
+					}
+
+					#divsubmit {
+						margin-top: 10px;
+						width: 98%;
+					}
+
+					#divsubmit input {
+						padding: 8px;
+						width: 100%;
+						margin-bottom: 15px;
+					}
+
+					#spanPackage, #xsell-rebill {
+						display: inline;
+				        margin-left: 5px;
+					}
+
+				/* /////////////////// END unchanged ///////////// */
+
+				}
+
+				/* end 768 //////////////////////////////////////////////////////////////////*/
+
+
+				/* ///////////////////////////////////////////////////////////////////////////////////////////
+				480px
+				///////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+										@media (max-width: 480px) {
+
+											body { font-size: 12px; }
+
+											#mainHeader { height: auto; width: 100%; display: block; background-color: transparent; padding: 0em 0 0em 0;}
+
+											#logoHeader {
+													background: url("https://spotlight.nakedcdn.com/huntformen/img/huntformen_rocketgateresponsive.png") no-repeat center top/auto 40px; height: 40px; }
+
+											/*
+											#logoHeader { margin: 0em; padding: .15em 0 0 0; 	line-height: .05em; background-image: url(https://spotlight.nakedcdn.com/nakedsword/img/logo.png); background-size: 262px 55px; background-repeat: no-repeat; background-position: top center; background-attachment: scroll; background-color: transparent; width: 100%; height: 55px;}
+											*/
+
+											/* seclect language pulldown option */
+											#logoHeader select, #currency { font-size: .75em; float: right; padding: .4em; border: none; color: #fff; margin-right: 2%; height: 2.75em; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -khtml-border-radius: 5px; -moz-appearance: none; -webkit-appearance: none;
+												appearance: none;
+												background: rgba(24,24,24,0.4) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgaWQ9IkxheWVyXzEiICAgZGF0YS1uYW1lPSJMYXllciAxIiAgIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIiAgIHZlcnNpb249IjEuMSIgICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkxIHIxMzcyNSIgICBzb2RpcG9kaTpkb2NuYW1lPSJkb3dubG9hZC5zdmciPiAgPG1ldGFkYXRhICAgICBpZD0ibWV0YWRhdGE0MjAyIj4gICAgPHJkZjpSREY+ICAgICAgPGNjOldvcmsgICAgICAgICByZGY6YWJvdXQ9IiI+ICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4gICAgICAgIDxkYzp0eXBlICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPiAgICAgIDwvY2M6V29yaz4gICAgPC9yZGY6UkRGPiAgPC9tZXRhZGF0YT4gIDxzb2RpcG9kaTpuYW1lZHZpZXcgICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIgICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiAgICAgYm9yZGVyb3BhY2l0eT0iMSIgICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiICAgICBncmlkdG9sZXJhbmNlPSIxMCIgICAgIGd1aWRldG9sZXJhbmNlPSIxMCIgICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIgICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMjciICAgICBpZD0ibmFtZWR2aWV3NDIwMCIgICAgIHNob3dncmlkPSJmYWxzZSIgICAgIGlua3NjYXBlOnpvb209Ijg0LjMiICAgICBpbmtzY2FwZTpjeD0iMi40NzQ5OTk5IiAgICAgaW5rc2NhcGU6Y3k9IjUiICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy15PSIyNyIgICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJMYXllcl8xIiAvPiAgPGRlZnMgICAgIGlkPSJkZWZzNDE5MCI+ICAgIDxzdHlsZSAgICAgICBpZD0ic3R5bGU0MTkyIj4uY2xzLTJ7ZmlsbDojNDQ0O308L3N0eWxlPiAgPC9kZWZzPiAgPHRpdGxlICAgICBpZD0idGl0bGU0MTk0Ij5hcnJvd3M8L3RpdGxlPiAgPHBvbHlnb24gICAgIGNsYXNzPSJjbHMtMiIgICAgIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIiAgICAgaWQ9InBvbHlnb240MTk4IiAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MSIgLz48L3N2Zz4=) no-repeat 97% 40%; }
+
+
+											#logoHeader select:focus, #logoHeader select option:active  {
+											outline: none; border: none; }
+
+											#logoHeader select option { border: none; backgrouround:rgb(51,51,51); background: rgba(51,51,51,0.99); font-size: .95em;}
+
+											/* product */
+											#purchaseInfoArea { height: auto; width: 100%; padding: .75em 0 .75em 0; font-size: 1.25em; text-align: center; background: rgb(255, 31, 0); background: rgba(255, 31, 0, 0.8);}
+
+											#purchaseInfo { text-align: center; color: #fff; font-weight: 400; font-size: 1.25em;}
+
+											#divproddesc { font-size: 1.25em; font-weight: 200; }
+
+											/* upsell pull down full size */
+											.divxsell select { font-size: .65em; padding: 3px 5px 3px 5px; margin-top: 5px; border-color: #666;ackground: #fff; background: rgba(24, 24, 24, 0.5); color: rgb(255,255,255); color: rgba(255,255,255,0.65); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -khtml-border-radius: 5px; -moz-appearance: none; -webkit-appearance: none; background: rgba(24, 24, 24, 0.5) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgaWQ9IkxheWVyXzEiICAgZGF0YS1uYW1lPSJMYXllciAxIiAgIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIiAgIHZlcnNpb249IjEuMSIgICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkxIHIxMzcyNSIgICBzb2RpcG9kaTpkb2NuYW1lPSJkb3dubG9hZC5zdmciPiAgPG1ldGFkYXRhICAgICBpZD0ibWV0YWRhdGE0MjAyIj4gICAgPHJkZjpSREY+ICAgICAgPGNjOldvcmsgICAgICAgICByZGY6YWJvdXQ9IiI+ICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4gICAgICAgIDxkYzp0eXBlICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPiAgICAgIDwvY2M6V29yaz4gICAgPC9yZGY6UkRGPiAgPC9tZXRhZGF0YT4gIDxzb2RpcG9kaTpuYW1lZHZpZXcgICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIgICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiAgICAgYm9yZGVyb3BhY2l0eT0iMSIgICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiICAgICBncmlkdG9sZXJhbmNlPSIxMCIgICAgIGd1aWRldG9sZXJhbmNlPSIxMCIgICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIgICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMjciICAgICBpZD0ibmFtZWR2aWV3NDIwMCIgICAgIHNob3dncmlkPSJmYWxzZSIgICAgIGlua3NjYXBlOnpvb209Ijg0LjMiICAgICBpbmtzY2FwZTpjeD0iMi40NzQ5OTk5IiAgICAgaW5rc2NhcGU6Y3k9IjUiICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy15PSIyNyIgICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJMYXllcl8xIiAvPiAgPGRlZnMgICAgIGlkPSJkZWZzNDE5MCI+ICAgIDxzdHlsZSAgICAgICBpZD0ic3R5bGU0MTkyIj4uY2xzLTJ7ZmlsbDojNDQ0O308L3N0eWxlPiAgPC9kZWZzPiAgPHRpdGxlICAgICBpZD0idGl0bGU0MTk0Ij5hcnJvd3M8L3RpdGxlPiAgPHBvbHlnb24gICAgIGNsYXNzPSJjbHMtMiIgICAgIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIiAgICAgaWQ9InBvbHlnb240MTk4IiAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MSIgLz48L3N2Zz4=) no-repeat 97% 40%;}
+
+											.divxsell select option { background: rgb(24, 24, 24); background: rgba(24, 24, 24, 0.5); color: rgb(255,255,255); color: rgba(255,255,255,0.65);}
+
+											/* form styles */
+											form { width: 100%; padding: 0px; margin: 0px; }
+
+											#formWrapper { padding: .15em 0 1.75em 0;}
+
+											#formWrapper #header { height: 1.5em; margin-bottom: .75em;}
+
+											#formWrapper #header h2 { color: #2471c1; font-size: 1em; margin-left: 1.2em;}
+
+											/* form elements */
+											.float-container, .nofloat-container { height: 3em; margin-bottom: .5em; background-color:#ffffff;}
+
+											/*non pull down labels */
+											.float-container label { line-height: .75em; font-size: 1em;}
+
+											.float-container input { font-size: 1em; padding: .75em 0 .7em 0; text-indent: .4em;}
+
+											/* pull down labels */
+											.nofloat-container label { font-size: 1em; line-height: 0em; margin: 0em; padding: 0em; left: .75em;}
+
+											/* pull downs */
+											#divexpire select, #divcountry select, #divstate select { height: 1.5em; font-size: .85em;}
+
+											/* tos area */
+											#divtos { margin: 10px 0 10px 0; font-size: .95em;}
+
+											/* upsell and rebill btm area text */
+											#div_rebill, #desc, #footer, #divverifinbypass { margin: 0; font-size: .75em; color: #cccccc; font-weight: 200;}
+
+											.descriptor { margin: 0 0 2px 0; font-weight: 400; font-style: italic;  }
+
+											.divxsell { margin-top: 0px;}
+
+											/* submit button */
+
+											#divsubmit input { display: inline-block; backgrouround:rgb(219,219,219); background: rgba(219,219,219,0.99); color: #000; font-size: 1.5em;	font-weight: 200; text-transform: uppercase; padding: .75em; border: none; width: 60%; cursor: pointer; -moz-border-radius: 5px;	-webkit-border-radius: 5px;	-khtml-border-radius: 5px; }
+
+											#divsubmit input:hover { font-weight: 600; background-color: #76c24b; opacity: .9; }
+
+
+
+											/* /////////////////// unchanged /////////////
+
+											#logoHeader {
+											  height: 35px;
+											}
+
+											#purchaseInfoArea {
+											  padding: 15px 0 25px 0;
+											}
+
+											#purchaseInfo {
+											  font-size: 16px;
+											  font-weight: bold;
+											  line-height: 1.5;
+											}
+
+											#xsell {
+											  font-size: 13px;
+											}
+
+											#formWrapper {
+												padding: 15px 0 15px 0;
+											}
+
+											#formWrapper #header {
+												background: url("https://dev-secure.rocketgate.com/hp/images/secure_lock_blue.png") no-repeat left top/auto 15px;
+												margin-bottom: 10px;
+											}
+
+											#formWrapper #header h2 {
+												font-size: 15px;
+												margin-left: 18px;
+											}
+
+											#rocketpay_emember  {
+												font-size: 13px;
+												margin-top: 2px;
+											}
+
+											#rocketpay_link {
+												width: 100%;
+											}
+
+											.float-container, .nofloat-container {
+											  margin-bottom: 7px;
+											}
+
+											.float-container input {
+											  padding: 15px 0 10px 0;
+												height: 16px;
+											}
+
+											.float-container label {
+												line-height: 10px;
+												font-size: 15px;
+											}
+
+											.nofloat-container label {
+												position: relative;
+												top: -2px;
+											}
+
+											#cardnoImages img {
+												width: 25px;
+												height: auto;
+											}
+
+											#divexpire select, #divcountry select, #divstate select {
+												height: 20px;
+											}
+
+											#divtos {
+												margin-top: 8px;
+												font-size: 13px;
+											}
+
+											#div_rebill, #desc {
+												margin-top: 5px;
+												font-size: 11px;
+											}
+
+											#divsubmit {
+												margin-top: 8px;
+											}
+
+										    #footer {
+										        margin-top: 10px;
+										    }
+
+										    #footer::first-line {
+										        font-weight: bold;
+										        font-size: 14px;
+										    }
+
+										    #footer {
+										        margin-top: 30px;
+										    }
+
+										    .divxsell {
+										        margin-top: 5px;
+										    }
+											 /* /////////////////// END unchanged ///////////// */
+										}
+
+										/* added for iphone 8 */
+
+																				@media (max-width: 380px) {
+
+																					body { font-size: 11px; }
+
+																					#mainHeader { height: auto; width: 100%; display: block; background-color: transparent; padding: 0em 0 0em 0;}
+
+																					#logoHeader {
+																							background: url("https://spotlight.nakedcdn.com/huntformen/img/huntformen_rocketgateresponsive.png") no-repeat center top/auto 35px; height: 35px; }
+
+																					/*
+																					#logoHeader { margin: 0em; padding: .15em 0 0 0; 	line-height: .05em; background-image: url(https://spotlight.nakedcdn.com/nakedsword/img/logo.png); background-size: 262px 55px; background-repeat: no-repeat; background-position: top center; background-attachment: scroll; background-color: transparent; width: 100%; height: 55px;}
+																					*/
+
+																					/* seclect language pulldown option */
+																					#logoHeader select, #currency { font-size: .75em; float: right; padding: .4em; border: none; color: #fff; margin-right: 2%; height: 2.75em; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -khtml-border-radius: 5px; -moz-appearance: none; -webkit-appearance: none;
+																						appearance: none;
+																						background: rgba(24,24,24,0.4) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgaWQ9IkxheWVyXzEiICAgZGF0YS1uYW1lPSJMYXllciAxIiAgIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIiAgIHZlcnNpb249IjEuMSIgICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkxIHIxMzcyNSIgICBzb2RpcG9kaTpkb2NuYW1lPSJkb3dubG9hZC5zdmciPiAgPG1ldGFkYXRhICAgICBpZD0ibWV0YWRhdGE0MjAyIj4gICAgPHJkZjpSREY+ICAgICAgPGNjOldvcmsgICAgICAgICByZGY6YWJvdXQ9IiI+ICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4gICAgICAgIDxkYzp0eXBlICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPiAgICAgIDwvY2M6V29yaz4gICAgPC9yZGY6UkRGPiAgPC9tZXRhZGF0YT4gIDxzb2RpcG9kaTpuYW1lZHZpZXcgICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIgICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiAgICAgYm9yZGVyb3BhY2l0eT0iMSIgICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiICAgICBncmlkdG9sZXJhbmNlPSIxMCIgICAgIGd1aWRldG9sZXJhbmNlPSIxMCIgICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIgICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMjciICAgICBpZD0ibmFtZWR2aWV3NDIwMCIgICAgIHNob3dncmlkPSJmYWxzZSIgICAgIGlua3NjYXBlOnpvb209Ijg0LjMiICAgICBpbmtzY2FwZTpjeD0iMi40NzQ5OTk5IiAgICAgaW5rc2NhcGU6Y3k9IjUiICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy15PSIyNyIgICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJMYXllcl8xIiAvPiAgPGRlZnMgICAgIGlkPSJkZWZzNDE5MCI+ICAgIDxzdHlsZSAgICAgICBpZD0ic3R5bGU0MTkyIj4uY2xzLTJ7ZmlsbDojNDQ0O308L3N0eWxlPiAgPC9kZWZzPiAgPHRpdGxlICAgICBpZD0idGl0bGU0MTk0Ij5hcnJvd3M8L3RpdGxlPiAgPHBvbHlnb24gICAgIGNsYXNzPSJjbHMtMiIgICAgIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIiAgICAgaWQ9InBvbHlnb240MTk4IiAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MSIgLz48L3N2Zz4=) no-repeat 97% 40%; }
+
+
+																					#logoHeader select:focus, #logoHeader select option:active  {
+																					outline: none; border: none; }
+
+																					#logoHeader select option { border: none; backgrouround:rgb(51,51,51); background: rgba(51,51,51,0.99); font-size: .95em;}
+
+																					/* product */
+																					#purchaseInfoArea { height: auto; width: 100%; padding: .75em 0 .75em 0; font-size: 1.25em; text-align: center; background: rgb(255, 31, 0); background: rgba(255, 31, 0, 0.8);}
+
+
+																					#purchaseInfo { text-align: center; color: #fff; font-weight: 400; font-size: 1.25em;}
+
+																					#divproddesc { font-size: 1.15em; font-weight: 200; }
+
+																					/* upsell pull down full size */
+																					.divxsell select { font-size: .65em; padding: 3px 5px 3px 5px; margin-top: 5px; border-color: #666; background: rgb(24, 24, 24); background: rgba(24, 24, 24, 0.5); color: rgb(255,255,255); color: rgba(255,255,255,0.65); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -khtml-border-radius: 5px; -moz-appearance: none; -webkit-appearance: none; background: rgba(24, 24, 24, 0.5) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgaWQ9IkxheWVyXzEiICAgZGF0YS1uYW1lPSJMYXllciAxIiAgIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIiAgIHZlcnNpb249IjEuMSIgICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkxIHIxMzcyNSIgICBzb2RpcG9kaTpkb2NuYW1lPSJkb3dubG9hZC5zdmciPiAgPG1ldGFkYXRhICAgICBpZD0ibWV0YWRhdGE0MjAyIj4gICAgPHJkZjpSREY+ICAgICAgPGNjOldvcmsgICAgICAgICByZGY6YWJvdXQ9IiI+ICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4gICAgICAgIDxkYzp0eXBlICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPiAgICAgIDwvY2M6V29yaz4gICAgPC9yZGY6UkRGPiAgPC9tZXRhZGF0YT4gIDxzb2RpcG9kaTpuYW1lZHZpZXcgICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIgICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiAgICAgYm9yZGVyb3BhY2l0eT0iMSIgICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiICAgICBncmlkdG9sZXJhbmNlPSIxMCIgICAgIGd1aWRldG9sZXJhbmNlPSIxMCIgICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIgICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMjciICAgICBpZD0ibmFtZWR2aWV3NDIwMCIgICAgIHNob3dncmlkPSJmYWxzZSIgICAgIGlua3NjYXBlOnpvb209Ijg0LjMiICAgICBpbmtzY2FwZTpjeD0iMi40NzQ5OTk5IiAgICAgaW5rc2NhcGU6Y3k9IjUiICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMTkyMCIgICAgIGlua3NjYXBlOndpbmRvdy15PSIyNyIgICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJMYXllcl8xIiAvPiAgPGRlZnMgICAgIGlkPSJkZWZzNDE5MCI+ICAgIDxzdHlsZSAgICAgICBpZD0ic3R5bGU0MTkyIj4uY2xzLTJ7ZmlsbDojNDQ0O308L3N0eWxlPiAgPC9kZWZzPiAgPHRpdGxlICAgICBpZD0idGl0bGU0MTk0Ij5hcnJvd3M8L3RpdGxlPiAgPHBvbHlnb24gICAgIGNsYXNzPSJjbHMtMiIgICAgIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIiAgICAgaWQ9InBvbHlnb240MTk4IiAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MSIgLz48L3N2Zz4=) no-repeat 97% 40%;}
+
+																					.divxsell select option { background: rgb(24, 24, 24); background: rgba(24, 24, 24, 0.5); color: rgb(255,255,255); color: rgba(255,255,255,0.65);}
+
+																					/* form styles */
+																					form { width: 100%; padding: 0px; margin: 0px; }
+
+																					#formWrapper { padding: .15em 0 1.75em 0;}
+
+																					#formWrapper #header { height: 1.5em; margin-bottom: .75em;}
+
+																					#formWrapper #header h2 { color: #2471c1; font-size: 1em; margin-left: 1.2em;}
+
+																					/* form elements */
+																					.float-container, .nofloat-container { height: 3em; margin-bottom: .5em; background-color:#ffffff;}
+
+																					/*non pull down labels */
+																					.float-container label { line-height: .75em; font-size: 1em;}
+
+																					.float-container input { font-size: 1em; padding: .75em 0 .7em 0; text-indent: .4em;}
+
+																					/* pull down labels */
+																					.nofloat-container label { font-size: 1em; line-height: 0em; margin: 0em; padding: 0em; left: .75em;}
+
+																					/* pull downs */
+																					#divexpire select, #divcountry select, #divstate select { height: 1.5em; font-size: .85em;}
+
+																					/* tos area */
+																					#divtos { margin: 10px 0 10px 0; font-size: .95em;}
+
+																					/* upsell and rebill btm area text */
+																					#div_rebill, #desc, #footer, #divverifinbypass { margin: 0; font-size: .75em; color: #cccccc; font-weight: 200;}
+
+																					.descriptor { margin: 0 0 2px 0; font-weight: 400; font-style: italic;  }
+
+																					.divxsell { margin-top: 0px;}
+
+																					/* submit button */
+
+																					#divsubmit input { display: inline-block; backgrouround:rgb(219,219,219); background: rgba(219,219,219,0.99); color: #000; font-size: 1.5em;	font-weight: 200; text-transform: uppercase; padding: .75em; border: none; width: 60%; cursor: pointer; -moz-border-radius: 5px;	-webkit-border-radius: 5px;	-khtml-border-radius: 5px; }
+
+																					#divsubmit input:hover { font-weight: 600; background-color: #76c24b; opacity: .9; }
+
+
+																				}

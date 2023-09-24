@@ -1,0 +1,19 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "svg"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "----7---sMini",
+        "javascript.autoClosingTags": false,
+        "typescript.autoClosingTags": false,
+        "editor.autoClosingDelete": "never",
+        "editor.autoClosingQuotes": "never",
+        "html.autoClosingTags": false,
+        "editor.autoClosingOvertype": "never"
+    }
+}

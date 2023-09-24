@@ -1,0 +1,58 @@
+
+
+<!-- Section 7 External GIF
+{* Section 7 GIF *}
+include file="nats:include_clock21"
+-->
+        
+
+ <!-- Page 37 Section -->
+<section class="home-section bg-dark light-content" style='background: transparent;' id="pageseven">
+      <div class="container min-height-100vh d-block align-items-center pt-100 pb-100">
+        <div class="full-wrapper relative">
+
+<!--
+<img src="https://sellapleasure.com/img-smp/16x9.png" width="100%" height="auto" style="width: 100%; height: 100%; aspect-ratio: 16/9;">
+-->
+
+                        
+ <div class="text-center mb-80 mb-sm-50">
+  <div class="OpeningCopy" style="position: absolute; z-index:11; margin: 15vh 0 0 0; padding: 0 4em; top: 0; left: 0; width: 100vw;">
+                                        <h1 class="hs-line-10 align-items-center wow fadeInUpShort" data-wow-delay=".5s">
+                                          <span class="titleopener"><div style="font-size: 150%;padding-bottom:50px;"><span class="wow fadeInUpShort" data-wow-delay=".55s">c</span><span class="wow fadeInUpShort" data-wow-delay=".75s">o</span><span class="wow fadeInUpShort" data-wow-delay=".95s">n</span><span class="wow fadeInUpShort" data-wow-delay="1.05s">g</span><span class="wow fadeInUpShort" data-wow-delay="1.15s">r</span><span class="wow fadeInUpShort" data-wow-delay="1.35s">a</span><span class="wow fadeInUpShort" data-wow-delay="1.55s">t</span><span class="wow fadeInUpShort" data-wow-delay="1.75s">s</span><span class="wow fadeInUpShort" data-wow-delay="1.95s">!</span>  </div>
+</span>
+                                            </h1>
+
+<div class="wow fadeInUpShort" data-wow-delay="3.25s">You have found <strong>SellAPleasure</strong></div>
+<div class="wow fadeInUpShort" data-wow-delay="3.5s"> - the affiliate network with the</div>
+<div class="wow fadeInUpShort" data-wow-delay="3.75s"><span style="font-size: 175%;">best </span> <span style="font-size: 195%;">offers</span>  </div>
+<div class="wow fadeInUpShort" data-wow-delay="3.95s" style="padding: 0 0 30px 0;">and <span style="font-size: 200%;">top payouts!</span> </div>
+
+
+                                     
+ <div class="d-flex align-items-center justify-content-center parallax col-sm-12 flex-column-sized local-scroll wow fadeInUpShort fadeScaleIn" data-wow-delay="4.15s"><br><br>
+                                            <a href="https://sellapleasure.com/external.php?page=signup"><img src='https://sellapleasure.com/img-smp/Button_SignUp.png' class="SellAPleasureSignupBtn"></a>
+                                        </div>
+
+  
+
+</div>
+</div>
+
+                              
+
+<!-- main video -->
+<div style="position: absolute; z-index: -2; width: 100vw; height: 100%; top: 0; left: 0; display: block; aspect-ratio: 16/9;">
+<a href="https://sellapleasure.com/external.php?page=signup" target="_blank">
+<img src="https://sellapleasure.com/img-smp/confeti-transp-2xsize-percept-diffusion-noise.gif" width="100%" height="100%">
+</a>
+</div>
+<!-- main video -->
+</div>
+
+</div>
+
+<!-- end full width --> 
+</div>
+</section>
+                <!-- End Page 7 Section -->

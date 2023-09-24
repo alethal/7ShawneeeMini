@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
+    <title>github-leastyouneedtoknow</title>
+</head>
+
+<body>
+    <h2 id='table-of-contents'>Table of contents</h2>
+    <p>This short GitHub Pages tutorial discusses:</p>
+    <ul>
+        <li><a href='https://tomcam.github.io/least-github-pages/#intended-audience'>Intended audience</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/creating-github-account.html'>Create a GitHub
+                Account</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/creating-github-repository.html'>Create a GitHub
+                repository</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/github-pages-create-readme.html'>Edit the main GitHub
+                Pages README file in /docs/README.md</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/enable-github-pages.html'>Enable GitHub Pages</a> so
+            you can create and publish a formatted website</li>
+        <li><a href='https://tomcam.github.io/least-github-pages/create-page-github.html'>Create a web page on
+                GitHub</a> using Markdown</li>
+        <li><a href='https://tomcam.github.io/least-github-pages/github-pages-directory-file-usage.html'>GitHub Pages
+                directory and file usage</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/markdown-links.html'>Create Markdown links to other
+                pages on your own site</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/markdown-headers.html'>Headers in Markdown</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/markdown-links-to-other-sites.html'>Create Markdown
+                links to other sites</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/markdown-link-page-interior.html'>Create Markdown links
+                to the interior of a page</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/adding-assets-directory-github-pages.html'>Add an
+                assets directory to your GitHub Pages site</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/github-pages-jekyll-themes.html'>Change the appearance
+                of your GitHub Pages site using Jekyll themes</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html'>Add images to
+                your GitHub Pages site</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/github-pages-url.html'>Determine your GitHub Pages
+                URL</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/privacy-warning.html'>Privacy warning</a></li>
+        <li><a href='https://tomcam.github.io/least-github-pages/add-github-pages-preview.html'>Add a GitHub Pages
+                preview link to your README.md</a></li>
+
+    </ul>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+    <h1 id='privacy-warning-github-pages-sites-are-public-even-if-your-repo-is-private'>Privacy warning: GitHub Pages
+        sites are public even if your repo is private</h1>
+    <p>GitHub allows you to create private repos. All GitHub Pages sites are generated from GitHub repos. However,
+        GitHub Pages allows you to create a publication from a private repo. Currently there’s no way to turn off this
+        feature, so don’t use a GitHub Pages link unless you want your private repo to be visible to the entire
+        Internet.</p>
+    <p>&nbsp;</p>
+    <p><a href='https://tomcam.github.io/least-github-pages/github-pages-url.html' target='_blank'
+            class='url'>https://tomcam.github.io/least-github-pages/github-pages-url.html</a></p>
+    <h1 id='determining-your-github-pages-url'>Determining your GitHub Pages URL</h1>
+    <p>It can be a little confusing, but when you’re using GitHub and viewing a Markdown page you’re seeing a simple
+        HTML rendering of that page with a fixed style sheet chosen by GitHub. You need a different link to view it in
+        GitHub Pages using one of the GitHub Pages Jekyll themes.</p>
+    <p>All you have to do to see your document with its final formatting is figure out the GitHub Pages address. Here’s
+        the Markdown source to both links:</p>
+    <pre><code>View on [Github Pages](https://tomcam.github.io/least-github-pages/)
+View on [Github](https://github.com/tomcam/least-github-pages/)
+</code></pre>
+    <p>Here’s how to create the GitHub Pages URL from the GitHub URL.</p>
+    <h2 id='get-the-full-url-of-your-github-repo'>Get the full URL of your GitHub repo</h2>
+    <p>Your first job is to make sure you know the full URL of your GitHub repo. For example, the name of this
+        repository is <code>https://github.com/tomcam/least-github-pages</code>. Here’s how it breaks down.</p>
+    <h3 id='start-with-the-github-url'>Start with the GitHub URL</h3>
+    <p>Recalling <a href='https://tomcam.github.io/least-github-pages/creating-github-repository.html#repo-url'>Creating
+            a GitHub repository for your projects</a>, your GitHub repository address is always made up of these
+        components:</p>
+    <p>The GitHub website URL:</p>
+    <pre><code>https://github.com/
+</code></pre>
+    <h3 id='add-the-username-and-a-slash'>Add the username and a slash</h3>
+    <p>Followed by your GitHub username/account name, and a <code>/</code> slash. The creator of this repo has the
+        GitHub username <code>tomcam</code>, for example.</p>
+    <pre><code>https://github.com/tomcam/
+</code></pre>
+    <h3 id='add-the-name-of-your-github-repo'>Add the name of your GitHub repo</h3>
+    <p>Followed by the name of the repo, so:</p>
+    <pre><code>https://github.com/tomcam/least-github-pages
+</code></pre>
+    <h2 id='the-github-pages-repository-url-is-always-httpsuseridgithubioreponame'>The GitHub Pages repository URL is
+        always https://{userid}.github.io/{reponame}</h2>
+    <p>The GitHub Pages URL is based on the GitHub repo URL, and takes the format
+        <code>https://{userid}.github.io/{reponame}</code>. The moment you use it, GitHub Pages will generate a website
+        based on the contents of your repo.</p>
+    <h3 id='use-the-elements-of-your-github-repo-url-to-derive-your-github-pages-url'>Use the elements of your GitHub
+        repo URL to derive your GitHub Pages URL</h3>
+    <p>Taking the parts of your URL, create the GitHub pages URL for it this way:</p>
+    <h3 id='start-with-https-and-your-username'>Start with https:// and your username</h3>
+    <ul>
+        <li>Start with <code>https://</code> followed your GitHub account name, and a period after that. For example, if
+            your GitHub account name happened to be <code>tomcam</code>:</li>
+
+    </ul>
+    <pre><code>https://tomcam.
+</code></pre>
+    <h3 id='add-githubio'>Add github.io</h3>
+    <ul>
+        <li>Follow it with <code>github.io</code>, <strong>not</strong> <code>github.com</code>:</li>
+
+    </ul>
+    <pre><code>https://tomcam.github.io
+</code></pre>
+    <h3 id='add-slash-and-the-repo-name'>Add slash and the repo name</h3>
+    <ul>
+        <li>Follow it with a slash <code>/</code> and your repo name. For example, if your repo name were
+            <code>least-github-pages</code>, the GitHub.io address would be:</li>
+
+    </ul>
+    <pre><code>https://tomcam.github.io/least-github-pages
+</code></pre>
+    <h3 id='example'>Example</h3>
+    <p>So this GitHub URL:</p>
+    <pre><code>[Github](https://github.com/tomcam/least-github-pages/)
+</code></pre>
+    <p>Becomes:</p>
+    <pre><code>[Github Pages](https://tomcam.github.io/least-github-pages/)
+</code></pre>
+    <p>Note that the parts in square brackets, <code>[GitHub]</code> in the first example, and
+        <code>[GitHub Pages]</code>, can be any text. They form the clickable link in the final rendered HTML.</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+    <h1 id='add-github-pages-preview-link-to-your-readmemd'>Add GitHub Pages preview link to your README.md</h1>
+    <p>It helps to have a link like this near the top of the document so your audience can view either the themed GitHub
+        Pages version or the GitHub repo preview:</p>
+    <pre><code>View in [Github Pages](https://tomcam.github.io/least-github-pages/) or directly on [Github](https://github.com/tomcam/least-github-pages/) 
+* [Your GitHub Pages URL and adding preview to your README.md](/least-github-pages/add-github-pages-preview.html)
+</code></pre>
+    <h2 id='it-can-take-a-few-moments-to-generate-the-current-github-pages-site'>It can take a few moments to generate
+        the current GitHub Pages site</h2>
+    <p>GitHub Pages doesn’t generate your new website every time you make changes to a repo. It updates “lazily”,
+        meaning that it won’t render the full Jekyll version of the site until someone actually browses to the GitHub
+        Pages URL. It can take up several minutes for your GitHub Pages site to be generated after you add pages or made
+        changes to existing ones.</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+i
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Member Change</title>
+</head>
+
+<body bgcolor="#f6f6f6">
+
+
+
+    <!-- outer table -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f6f6f6">
+        <TR>
+            <TD width="100%" align="center">
+
+                <!-- inner wrapper -->
+                <table border="0" cellpadding="0" cellspacing="0" width="650">
+
+                    <!-- top -->
+                    <TR>
+                        <TD colspan="3" style="background: #ffffff;">
+                            <a href="https://www.trailertrashboys.com/" target="_blank"><img
+                                    src="https://spotlight.nakedcdn.com/trailertrashboys/trailer-trash-boys-site-logo.png"
+                                    width="640" height="129" alt="TrailerTrashBoys.com" border="0"
+                                    title="TrailerTrashBoys.com!" /></a>
+                        </TD>
+                    </TR>
+                    <!-- ** top -->
+
+                    <TR>
+                        <TD colspan="3" style="background: #ffffff;"><img
+                                src="https://spotlight.nakedcdn.com/spacer.gif" height="10" width="10" border="0" />
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD style="background-color:#ffffff;"><img src="https://spotlight.nakedcdn.com/spacer.gif"
+                                height="10" width="10" border="0" />
+                        </TD>
+                        <TD valign="top" align="left" style="background-color:#ffffff;">
+
+                            <div style="background-color:#ffffff; padding: 10px;">
+
+                                <font face="Helvetica, arial, sans-serif" size="2" color="#000000">
+
+                                    Dear TrailerTrashBoys.com Member,<BR />
+
+                                    This is a head's up that your account has been changed.<BR /><BR />
+                                    Username: {$member.username}<BR />
+                                    {foreach from=$changes item=item key=key}
+                                    {if $key != "cryptpass"}
+                                    {if $item != $member[$item]}{$key}: {$item}<BR />{/if}
+                                    {/if}
+                                    {/foreach}
+                                    <BR /><BR />
+                                    <br>
+                                    If you have any questions, TrailerTrashBoys.com customer service specialists are
+                                    available to
+                                    help you Monday to Friday 10am-8pm | <em>(All times are US Eastern Time)</em> |
+                                    Closed - Saturday &amp; Sunday. <br>To get in touch, click on the "<a
+                                        href="https://trailertrashboys.com/help" target="_blank"
+                                        style="text-decoration: none;">
+                                        <font color="#83d0cb">HELP</font>
+                                    </a>" tab or call U.S. (TOLL FREE) 888.207.4534 - INTERNATIONAL
+                                    980.505.8324<br /><br />
+                                    <em>Now log on and get off!</em><br />
+                                    Your friends at <a href="https://trailertrashboys.com" target="_blank"
+                                        style="text-decoration: none;">
+                                        <font color="#83d0cb">TrailerTrashBoys.com</font>
+                                    </a>
+
+                                    <BR /><BR />
+
+                                </font>
+                            </div>
+                        </TD>
+                        <TD style="background: #ffffff;"><img src="https://spotlight.nakedcdn.com/spacer.gif"
+                                height="10" width="10" border="0" />
+                        </TD>
+                    </TR>
+                </TABLE>
+                <!-- // inner wrapper -->
+
+            </TD>
+        </TR>
+    </table>
+    <!-- // outer table -->
+</body>
+
+</html>

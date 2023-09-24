@@ -1,0 +1,24 @@
+Hello {$member.firstname},
+
+Welcome to NakedSword! Below are the details of your new account: Please keep this email in a safe place.
+
+---
+
+Site Name: {$details.siteid.name}
+
+---
+
+Member Data:
+Username: {$member.username}
+Password: {$member.password}
+
+---
+
+You can find your detailed account information in the "My Account" section of http://www.nakedsword.com. If you have any questions, NakedSword customer service specialists are available to help Monday to Thursday 8am-Midnight / Friday 8am-2a EST/ Saturday 10am-2am. All times are US Eastern Time. Closed Sunday.. To get in touch, click on the "Help" tab or call 888-207-4534.
+
+Thanks for joining, and have fun getting off!
+
+Signed,
+Your friends at NakedSword
+
+---

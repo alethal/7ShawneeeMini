@@ -1,0 +1,715 @@
+<!DOCTYPE HTML>
+<html>
+
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="cleartype" content="on">
+  <title>RocketPay</title>
+  <script language="Javascript" src="https://secure-2.rocketgate.com/hp/js/jquery-3.5.1.min.js"></script>
+  <script language="Javascript" src="https://secure-2.rocketgate.com/hp/js/jquery.validate.min.1.19.0.js"></script>
+  <script language="Javascript" src="https://secure-2.rocketgate.com/hp/js/additional-methods.min.1.19.0.js"></script>
+  <link rel="stylesheet" href="https://secure-2.rocketgate.com/hp/css/g2_min.css" type="text/css" />
+  <link rel="stylesheet" href="huntformen_now.css" type="text/css" />
+</head>
+<body onLoad="onLoadActions();" class="RG_METHOD_CC RG_LANG_EN RG_ROCKETPAY_ENABLED">
+    <div id="masthead">
+        <div id="mainHeader">
+
+            <div id="logoHeader" class="pageWrapper">
+
+              <select name="languageSelector" id="languageSelector" class="selectOne" onchange="switchLanguage(this,'ChangeLanguage.jsp;jsessionid=BFF7804B8F50F662050732C2C581FC75?flag=1837abac932');">
+<option value="AR">العربية</option>
+<option value="CS">čeština</option>
+<option value="DA">Dansk</option>
+<option value="EN" selected>English</option>
+<option value="ZH">中文</option>
+<option value="DE">Deutsch</option>
+<option value="ES">Español</option>
+<option value="FI">Suomalainen</option>
+<option value="FR">Français</option>
+<option value="EL">ελληνικά</option>
+<option value="HU">Magyar</option>
+<option value="IT">Italiano</option>
+<option value="JA">日本語</option>
+<option value="KO">한국어</option>
+<option value="LT">Lietuvių</option>
+<option value="NL">Nederlands</option>
+<option value="NO">Norsk</option>
+<option value="PL">Polski</option>
+<option value="PT">Português</option>
+<option value="RU">Русский</option>
+<option value="RO">Română</option>
+<option value="SK">Slovenščina</option>
+<option value="SV">Svenska</option>
+<option value="TR">Türkçe</option>
+
+              </select>
+            </div>
+        </div>
+      </div><!-- end masthead -->
+
+
+    <form name="signup_form" id="signup_form" action="servlet/HostedPageRegister;jsessionid=BFF7804B8F50F662050732C2C581FC75?flag=1837abac932" method="POST" enctype="application/x-www-form-urlencoded" onsubmit="return onSubmitActions();">
+
+
+
+      <div id="purchaseInfoArea">
+
+
+
+
+        <div id="purchaseInfo" class="pageWrapper">
+
+
+
+       <div id="divproddesc">Membership for 7 days for $7.95*</div>
+
+
+          </div><!-- end purchaseInfo -->
+
+
+         </div><!-- end purchaseInfoArea -->
+     
+  
+ 
+  <div id="formWrapper" class="pageWrapper">
+   <div id="header">
+      <h2>RocketPay</h2>
+
+
+
+    <div id="rocketpay-opt-in">
+      <div id="rocketpay_remember">
+        <input type="checkbox" name="rocketPay" id="rocketpay_checkbox" class="rocketpay" checked >
+        <span id="rocketpay_info" onclick="toggle_rocketpay_info('rocketpay_link');"><img id="rocketpay_help_img" src="/hp/images/info.svg" width="16" height="16" border="0"></span>
+        <label for="rocketpay_checkbox">Remember me</label>
+      </div>
+
+      <div id="rocketpay_link">
+        <p>We use <b>RocketPay®</b> to securely store your payment info for fast checkout on future purchases. <a href="https://rocketpay.net/howitworks/" target="_new">More Info</a></p>
+       </div>
+   </div>
+
+
+
+
+</div>
+
+  
+  <div id="divinputs">
+
+
+    <div id="divfname" class="float-container">
+      <label for="fname">First Name</label>
+      <input type="text" NAME="fname" id="fname" class="required" autocomplete="cc-given-name" onBlur="checkInput('fname');" minlength="2" maxlength="32"
+        VALUE="" title="First Name" 
+        data-name="fname" data-rule-minlength="2" data-rule-nonumbers="true" required="required" />
+    </div>
+
+    <div id="divlname" class="float-container">
+      <label for="lname">Last Name</label>
+      <input type="text" NAME="lname" id="lname" class="required" autocomplete="cc-family-name" onBlur="checkInput('lname');" minlength="2" maxlength="120"
+        VALUE="" size="30" title="Last Name" 
+        data-name="lname" required="required" data-rule-minlength="2" data-rule-nonumbers="true" />
+    </div>
+
+
+
+
+    <div id="divcardno" class="float-container">
+      <label for="cardno">Card Number</label>
+
+      <input name="cardno" id="cardno" class="required" title="Card Number"
+	   type="tel" required="required" autocomplete="cc-number" maxlength="19" 
+	   onBlur="checkClearedCardNo(this); moveInfoImg('cardno','cardnoImages','35px');" onClick="clearCardNo(this);"
+
+
+   onChange="displayAddrFields();" VALUE="" 
+   data-rule-creditcard="true" data-rule-amexcreditcard="true" />
+
+<div id="cardnoImages">
+<img id="mcardImage" src="/hp/images/mcard-y23.png" height="23" align="absmiddle" border="0">
+<img id="visaImage" src="/hp/images/visa-y23.png" height="23" align="absmiddle" border="0">
+<img id="discImage" src="/hp/images/disc-y23.png" height="23" align="absmiddle" border="0">
+</div>
+
+    </div>
+
+    <div id="divexpire" class="nofloat-container">
+      <label for="expire_month">Expire Date</label>
+      <div id="spanexpiremonth">
+      <select name="expire_month" id="expire_month" autocomplete="cc-exp-month" class="selectOne monthSelect"
+        title="Expire Date" onBlur="checkExpire();" onChange="checkExpire();" required>
+<option value=""> MM</option>
+<option value="1"> 01 - Jan</option>
+<option value="2"> 02 - Feb</option>
+<option value="3"> 03 - Mar</option>
+<option value="4"> 04 - Apr</option>
+<option value="5"> 05 - May</option>
+<option value="6"> 06 - Jun</option>
+<option value="7"> 07 - Jul</option>
+<option value="8"> 08 - Aug</option>
+<option value="9"> 09 - Sep</option>
+<option value="10"> 10 - Oct</option>
+<option value="11"> 11 - Nov</option>
+<option value="12"> 12 - Dec</option>
+
+        <optgroup disabled></optgroup>
+      </select>
+      </div>
+
+      <div id="spanexpireyear">
+      <select name="expire_year" id="expire_year" autocomplete="cc-exp-year" class="selectOne yearSelect"
+        title="Expire Date" onBlur="checkExpire();" onChange="checkExpire();" required>
+<option value=""> YYYY</option>
+<option value="22"> 2022</option>
+<option value="23"> 2023</option>
+<option value="24"> 2024</option>
+<option value="25"> 2025</option>
+<option value="26"> 2026</option>
+<option value="27"> 2027</option>
+<option value="28"> 2028</option>
+<option value="29"> 2029</option>
+<option value="30"> 2030</option>
+<option value="31"> 2031</option>
+<option value="32"> 2032</option>
+<option value="33"> 2033</option>
+<option value="34"> 2034</option>
+<option value="35"> 2035</option>
+<option value="36"> 2036</option>
+<option value="37"> 2037</option>
+<option value="38"> 2038</option>
+<option value="39"> 2039</option>
+<option value="40"> 2040</option>
+<option value="41"> 2041</option>
+
+        <optgroup disabled></optgroup>
+      </select>
+      </div>
+    </div>
+
+    <div id="divcvv2" class="float-container">
+      <label for="cvv2">CVV</label>
+      <input name="cvv2" id="cvv2" minlength="3" maxlength="4" class="required" onBlur="checkInput('cvv2');moveInfoImg('cvv2', 'cvv_info','35px');"
+        VALUE="" title="CVV"
+        type="tel" required="required" data-name="cvv" autocomplete="cc-csc" pattern="[0-9\*]{3,4}" /> 
+      <div id="cvv_info">
+            <span class="cvv_image"><img src="/hp/images/cvv-card.png"></span>
+      </div>
+    </div>
+
+
+    <input type="hidden" name="address" id="address" VALUE="" />
+
+
+
+    <input type="hidden" name="city" id="city" VALUE="" />
+
+
+
+
+    <input type="hidden" name="state" id="state" VALUE="" />
+
+
+
+    <div id="divzip" class="float-container" style="display: block;">
+      <label for="zip">Zip/Postal</label>
+      <input type="text" NAME="zip" id="zip" value="" class=""
+        title="Zip/Postal" size="30" maxlength="13" autocomplete="billing postal-code" 
+        data-name="zip" data-rule-minlength="3"/>
+    </div>
+
+
+
+    <div id="divcountry" class="nofloat-container"style="display: block;">
+      <label for="country">Country</label>
+      <select name="country" id="country" class="selectOne" onBlur="checkInput('country');" title="Country" required >
+<option value="">Please select your country</option>
+<option value="US" selected>UNITED STATES OF AMERICA</option>
+<option value="AU">AUSTRALIA</option>
+<option value="CA">CANADA</option>
+<option value="FR">FRANCE</option>
+<option value="DE">GERMANY</option>
+<option value="JP">JAPAN</option>
+<option value="GB">UNITED KINGDOM (GREAT BRITAIN)</option>
+<option value="---">------------</option>
+<option value="AF">AFGHANISTAN</option>
+<option value="AX">ALAND ISLANDS</option>
+<option value="AL">ALBANIA</option>
+<option value="DZ">ALGERIA</option>
+<option value="AS">AMERICAN SAMOA</option>
+<option value="AD">ANDORRA</option>
+<option value="AO">ANGOLA</option>
+<option value="AI">ANGUILLA</option>
+<option value="AQ">ANTARCTICA</option>
+<option value="AG">ANTIGUA AND BARBUDA</option>
+<option value="AR">ARGENTINA</option>
+<option value="AM">ARMENIA</option>
+<option value="AW">ARUBA</option>
+<option value="AU">AUSTRALIA</option>
+<option value="AT">AUSTRIA</option>
+<option value="AZ">AZERBAIJAN</option>
+<option value="BS">BAHAMAS</option>
+<option value="BH">BAHRAIN</option>
+<option value="BD">BANGLADESH</option>
+<option value="BB">BARBADOS</option>
+<option value="BE">BELGIUM</option>
+<option value="BZ">BELIZE</option>
+<option value="BJ">BENIN</option>
+<option value="BM">BERMUDA</option>
+<option value="BT">BHUTAN</option>
+<option value="BO">BOLIVIA</option>
+<option value="BA">BOSNIA AND HERZEGOVINA</option>
+<option value="BW">BOTSWANA</option>
+<option value="BV">BOUVET ISLAND</option>
+<option value="BR">BRAZIL</option>
+<option value="IO">BRITISH INDIAN OCEAN TERRITORY</option>
+<option value="BN">BRUNEI DARUSSALAM</option>
+<option value="BG">BULGARIA</option>
+<option value="BF">BURKINA FASO</option>
+<option value="BI">BURUNDI</option>
+<option value="KH">CAMBODIA</option>
+<option value="CM">CAMEROON</option>
+<option value="CA">CANADA</option>
+<option value="CV">CABO VERDE</option>
+<option value="KY">CAYMAN ISLANDS</option>
+<option value="CF">CENTRAL AFRICAN REPUBLIC</option>
+<option value="TD">CHAD</option>
+<option value="CL">CHILE</option>
+<option value="CN">CHINA</option>
+<option value="CX">CHRISTMAS ISLAND</option>
+<option value="CC">COCOS (KEELING) ISLANDS</option>
+<option value="CO">COLOMBIA</option>
+<option value="KM">COMOROS</option>
+<option value="CK">COOK ISLANDS</option>
+<option value="CR">COSTA RICA</option>
+<option value="HR">CROATIA</option>
+<option value="CY">CYPRUS</option>
+<option value="CZ">CZECHIA</option>
+<option value="DK">DENMARK</option>
+<option value="DJ">DJIBOUTI</option>
+<option value="DM">DOMINICA</option>
+<option value="DO">DOMINICAN REPUBLIC</option>
+<option value="EC">ECUADOR</option>
+<option value="EG">EGYPT</option>
+<option value="SV">EL SALVADOR</option>
+<option value="GQ">EQUATORIAL GUINEA</option>
+<option value="ER">ERITREA</option>
+<option value="EE">ESTONIA</option>
+<option value="ET">ETHIOPIA</option>
+<option value="FK">FALKLAND ISLANDS</option>
+<option value="FO">FAROE ISLANDS</option>
+<option value="FJ">FIJI</option>
+<option value="FI">FINLAND</option>
+<option value="FR">FRANCE</option>
+<option value="GF">FRENCH GUIANA</option>
+<option value="PF">FRENCH POLYNESIA</option>
+<option value="TF">FRENCH SOUTHERN TERRITORIES</option>
+<option value="GA">GABON</option>
+<option value="GM">GAMBIA</option>
+<option value="GE">GEORGIA</option>
+<option value="DE">GERMANY</option>
+<option value="GH">GHANA</option>
+<option value="GI">GIBRALTAR</option>
+<option value="GR">GREECE</option>
+<option value="GL">GREENLAND</option>
+<option value="GD">GRENADA</option>
+<option value="GP">GUADELOUPE</option>
+<option value="GU">GUAM</option>
+<option value="GT">GUATEMALA</option>
+<option value="GG">GUERNSEY</option>
+<option value="GN">GUINEA</option>
+<option value="GW">GUINEA-BISSAU</option>
+<option value="GY">GUYANA</option>
+<option value="HT">HAITI</option>
+<option value="HM">HEARD AND MCDONALD ISLANDS</option>
+<option value="VA">HOLY SEE (VATICAN CITY)</option>
+<option value="HN">HONDURAS</option>
+<option value="HK">HONG KONG</option>
+<option value="HU">HUNGARY</option>
+<option value="IS">ICELAND</option>
+<option value="IN">INDIA</option>
+<option value="ID">INDONESIA</option>
+<option value="IE">IRELAND</option>
+<option value="IM">ISLE OF MAN</option>
+<option value="IL">ISRAEL</option>
+<option value="IT">ITALY</option>
+<option value="JM">JAMAICA</option>
+<option value="JP">JAPAN</option>
+<option value="JE">JERSEY</option>
+<option value="JO">JORDAN</option>
+<option value="KZ">KAZAKHSTAN</option>
+<option value="KE">KENYA</option>
+<option value="KI">KIRIBATI</option>
+<option value="KR">KOREA, REPUBLIC OF</option>
+<option value="KW">KUWAIT</option>
+<option value="KG">KYRGYZSTAN</option>
+<option value="LA">LAOS</option>
+<option value="LV">LATVIA</option>
+<option value="LS">LESOTHO</option>
+<option value="LI">LICHTENSTEIN</option>
+<option value="LT">LITHUANIA</option>
+<option value="LU">LUXEMBOURG</option>
+<option value="MO">MACAU</option>
+<option value="MK">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</option>
+<option value="MG">MADAGASCAR</option>
+<option value="MW">MALAWI</option>
+<option value="MY">MALAYSIA</option>
+<option value="MV">MALDIVES</option>
+<option value="ML">MALI</option>
+<option value="MT">MALTA</option>
+<option value="MH">MARSHALL ISLANDS</option>
+<option value="MQ">MARTINIQUE</option>
+<option value="MR">MAURITANIA</option>
+<option value="MU">MAURITIUS</option>
+<option value="YT">MAYOTTE</option>
+<option value="MX">MEXICO</option>
+<option value="FM">MICRONESIA</option>
+<option value="MD">MOLDOVA</option>
+<option value="MC">MONACO</option>
+<option value="MN">MONGOLIA</option>
+<option value="ME">MONTENEGRO</option>
+<option value="MS">MONTSERRAT</option>
+<option value="MA">MOROCCO</option>
+<option value="MZ">MOZAMBIQUE</option>
+<option value="NA">NAMIBIA</option>
+<option value="NR">NAURU</option>
+<option value="NP">NEPAL</option>
+<option value="NL">NETHERLANDS</option>
+<option value="AN">NETHERLANDS ANTILLES</option>
+<option value="NC">NEW CALEDONIA</option>
+<option value="NZ">NEW ZEALAND</option>
+<option value="NI">NICARAGUA</option>
+<option value="NE">NIGER</option>
+<option value="NG">NIGERIA</option>
+<option value="NU">NIUE</option>
+<option value="NF">NORFOLK ISLAND</option>
+<option value="MP">NORTHERN MARIANA ISLANDS</option>
+<option value="NO">NORWAY</option>
+<option value="OM">OMAN</option>
+<option value="PK">PAKISTAN</option>
+<option value="PW">PALAU</option>
+<option value="PS">PALESTINIAN TERRITORY</option>
+<option value="PA">PANAMA</option>
+<option value="PG">PAPUA NEW GUINEA</option>
+<option value="PY">PARAGUAY</option>
+<option value="PE">PERU</option>
+<option value="PH">PHILIPPINES</option>
+<option value="PN">PITCAIRN</option>
+<option value="PL">POLAND</option>
+<option value="PT">PORTUGAL</option>
+<option value="PR">PUERTO RICO</option>
+<option value="QA">QATAR</option>
+<option value="RE">REUNION</option>
+<option value="RO">ROMANIA</option>
+<option value="RU">RUSSIAN FEDERATION</option>
+<option value="RW">RWANDA</option>
+<option value="BL">SAINT BARTHÉLEMY</option>
+<option value="SH">SAINT HELENA</option>
+<option value="KN">SAINT KITTS AND NEVIS</option>
+<option value="LC">SAINT LUCIA</option>
+<option value="MF">SAINT MARTIN</option>
+<option value="PM">SAINT PIERRE AND MIQUELON</option>
+<option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+<option value="WS">SAMOA</option>
+<option value="SM">SAN MARINO</option>
+<option value="ST">SAO TOME AND PRINCIPE</option>
+<option value="SA">SAUDI ARABIA</option>
+<option value="SN">SENEGAL</option>
+<option value="RS">SERBIA</option>
+<option value="SC">SEYCHELLES</option>
+<option value="SL">SIERRA LEONE</option>
+<option value="SG">SINGAPORE</option>
+<option value="SK">SLOVAKIA</option>
+<option value="SI">SLOVENIA</option>
+<option value="SB">SOLOMON ISLANDS</option>
+<option value="ZA">SOUTH AFRICA</option>
+<option value="GS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+<option value="ES">SPAIN</option>
+<option value="LK">SRI LANKA</option>
+<option value="SR">SURINAME</option>
+<option value="SJ">SVALBARD AND JAN MAYEN ISLANDS</option>
+<option value="SZ">ESWATINI</option>
+<option value="SE">SWEDEN</option>
+<option value="CH">SWITZERLAND</option>
+<option value="TW">TAIWAN</option>
+<option value="TJ">TAJIKISTAN</option>
+<option value="TZ">TANZANIA</option>
+<option value="TH">THAILAND</option>
+<option value="TL">TIMOR-LESTE</option>
+<option value="TG">TOGO</option>
+<option value="TK">TOKELAU</option>
+<option value="TO">TONGA</option>
+<option value="TT">TRINIDAD AND TOBAGO</option>
+<option value="TN">TUNISIA</option>
+<option value="TR">TURKEY</option>
+<option value="TM">TURKMENISTAN</option>
+<option value="TC">TURKS AND CAICOS ISLANDS</option>
+<option value="TV">TUVALU</option>
+<option value="UG">UGANDA</option>
+<option value="UA">UKRAINE</option>
+<option value="AE">UNITED ARAB EMIRATES</option>
+<option value="GB">UNITED KINGDOM (GREAT BRITAIN)</option>
+<option value="US" selected>UNITED STATES OF AMERICA</option>
+<option value="UM">UNITED STATES MINOR ISLANDS</option>
+<option value="UY">URUGUAY</option>
+<option value="UZ">UZBEKISTAN</option>
+<option value="VU">VANUATU</option>
+<option value="VN">VIET NAM</option>
+<option value="VG">VIRGIN ISLANDS (BRITISH)</option>
+<option value="VI">VIRGIN ISLANDS (USA)</option>
+<option value="WF">WALLIS AND FUTUNA</option>
+<option value="EH">WESTERN SAHARA</option>
+<option value="YE">YEMEN</option>
+<option value="ZM">ZAMBIA</option>
+
+      </select>
+    </div>
+
+
+
+
+
+
+  </div><!-- end divinputs -->
+
+
+
+
+
+    <div id="divtos">
+
+        <input type="checkbox" name="tos" id="tos" class="inputCheckbox" required onclick="checkInput('tos');" value="true"  />
+        <label for="tos" class="labelCheckbox">
+          I have read and agree to the <a href="javascript:void(0);" onClick="javascript:window.open('https://huntformen.com/tos','TOS');" >Terms of Service</a>  
+  &amp; <a href="javascript:void(0);" onClick="javascript:window.open('https://huntformen.com/privacy','Privacy');">Privacy Policy</a>
+        </label>
+
+    </div>
+
+
+    <div id="desc">
+      <p class="descriptor">This charge will show on your statement as
+'NS Entertain 888-207-4534'.
+
+</p>
+    </div>
+
+
+
+
+
+    <div id="div_rebill">
+      <label for="rebill_desc"></label>
+      <div id="spanPackage">* After 7 days, renews at $29.95 every 30 days until canceled.</div>
+      
+
+    </div>
+    <div style="clear: both;"></div>
+
+
+    <div id="divsubmit">
+
+      <input type="submit" name="submit" class="submitButton" value='Submit Info' id='sub_us'>
+
+    </div>
+
+
+  </div><!-- end formWrapper -->
+
+
+	<input type="hidden" name="CSRFToken" value="82038072238395653475471029534295440083701124014592630569672044467262144815295">
+</form>
+
+
+    <div id="footer"> &nbsp; </div><!-- end footer -->
+
+
+
+<script language="Javascript" src="/hp/js/floatLabels.js"></script>
+<script type="text/javascript">
+function showError(a){var b=document.getElementById(a);if(b){b.setAttribute("class",b.getAttribute("class")+" error")}}function showCheck(a){var b=document.getElementById(a);if(b){b.setAttribute("class",b.getAttribute("class")+" good")}}function clearCheck(a){var b=document.getElementById(a);if(b&&a!=="tos"){b.setAttribute("class","")}}var fNms=new Array();fNms.fname=["First Name",2,32];fNms.lname=["Last Name",2,32];fNms.cardno=["Card Number",13,19];fNms.cvv2=["CVV2 - Card Security Code",3,4];fNms.tos=["Terms of Service",-1];fNms.address=["Street Address",1,128];fNms.city=["City",1,32];fNms.state=["State",1,32];fNms.zip=["Zip/Postal",-1,10];fNms.country=["Country",2,2];fNms.email=["Email",1,64];fNms.username=["Username",6,48];fNms.pw=["Password",6,36];fNms.taxid=["TaxID",11,11];function checkInput(b){var g=fNms[b];var f="";if(typeof(g)=="undefined"){g=new Array(3);g[0]=b;g[1]=-1;g[2]=-1;g[3]=b}else{if(g.length<4){g[3]=b}}var h=document.getElementById(b);if(!h){return b+" not found."}if(h.type=="checkbox"){if(!h.checked){f=g[0]+" is a required field.\n"}}else{if(b=="taxid"){if("none"==document.getElementById("divtaxid").style.display){return}var d=h.value.replace(/[^0-9\*]/g,"");a=d.length;if(g[1]>0&&a<g[1]){f+=g[0]+" is too short\n"}else{if(g[2]>0&&a>g[2]){f+=g[0]+" is too long\n"}else{h.value=d}}}else{var a=0;var c=h.value;if(c==h.title){c=""}if(b=="cardno"||b=="account_us"||b=="rg_Cardno"){h.value=h.value.replace(/[^0-9\-\*]/g,"");a=h.value.length;if(b=="cardno"){if(luhn_checksum(h.value)!=0||!checkCardLength(h.value)){f+="Invalid Credit Card";h.setCustomValidity("Invalid Credit Card")}else{h.setCustomValidity("")}}}else{if(b=="cvv2"){h.value=h.value.replace(/[^0-9\*]/g,"");a=h.value.length}else{a=c.length;if(/[0-9\-\s]{13,}/.test(c)){f+=g[0]+" can not contain credit card number\n"}if(b=="address"||b=="city"){if(/(?:[\uD800-\uDBFF][\uDC00-\uDFFF])/g.test(c)){f+=g[0]+" may only include UTF8 encoding chars with max of 3-bytes.\n";h.setCustomValidity("Invalid Characters")}else{h.setCustomValidity("")}}else{if(b=="fname"||b=="lname"){h.setCustomValidity("")}}}}if(g[1]>0&&a<g[1]){f+=g[0]+" is too short\n"}else{if(g[2]>0&&a>g[2]){f+=g[0]+" is too long\n"}}}}clearCheck(g[3]);if(f.length==0){showCheck(g[3])}else{showError(g[3])}return f}function checkRequiredFields(){var b="";for(var a=0;a<fldAry.length;a++){b+=checkInput(fldAry[a])}if(!checkExpire()){b+="Invalid Expiration\n"}if(b.length==0){return true}else{alert(b);return false}}function checkExpire(){var c=document.getElementById("expire_month");if(!c){return" Expiration Month not found."}var d=document.getElementById("expire_year");if(!d){return" Expiration Year not found."}var a=new Date();var b=20+d.value;clearCheck("expire_month");clearCheck("expire_year");if(c.selectedIndex<1){return false}if(b<a.getFullYear()){return false}if(b<a.getFullYear()||(c.selectedIndex<=a.getMonth()&&b==a.getFullYear())){showError("expire_month");showError("expire_year");c.setCustomValidity("Invalid Expiration");return false}else{showCheck("expire_month");showCheck("expire_year");c.setCustomValidity("");return true}}function luhn_checksum(e){var a=e.length;var f=a%2;var c=0;for(var b=a-1;b>=0;b--){var g=parseInt(e.charAt(b));if(b%2==f){g*=2}if(g>9){g-=9}c+=g}return c%10}function checkCardLength(h){var b=h.length;if(b<13||19<b){return false}var f=new Array(b);var a=0;var g=0;var d=0;for(var c=0;c<b;c++){var e=h.charAt(c);if(e<"0"||e>"9"){return false}f[c]=parseInt(e);a=a*10+f[c];if(c==1){g=a}if(c==5){d=a}}if(f[0]==4){return(b==16||b==13)}if((51<=g&&g<=55)||(222100<=d&&d<=272099)){return(b==16)}if(34==g||g==37){return(b==15)}return true}function setOnLoad(){var b=signup_form.elements;for(var a=0;a<b.length;a++){if(b[a].value.length==0){document.getElementById(b[a].id).focus();document.getElementById(b[a].id).select();break}}};
+
+
+function onLoadActions() {
+    setOnLoad();
+
+    moveInfoImg('cardno','cardnoImages','35px');
+    moveInfoImg('cvv2', 'cvv_info','35px');
+}
+
+function onSubmitActions() {
+    if (checkRequiredFields()) {
+
+        return true;
+    }
+    return false;
+}
+
+// move logos for validation icons
+function moveInfoImg(eName,iconName,distance) {
+ var el = document.getElementById(eName);
+ if (! el) return;
+
+ if ( (el.className.indexOf("good") != -1) || (el.className.indexOf("error") != -1)) {
+    if(eName == 'taxid'){
+        document.getElementsByClassName(iconName)[0].style.right = distance;
+    }else{
+        document.getElementById(iconName).style.right = distance;
+    }
+ }
+}
+</script>
+
+
+<script type="text/javascript">
+
+  function switchLanguage(elem,languageCodeURL) {
+     var lang = elem.options[elem.selectedIndex].value;
+     window.location = languageCodeURL + "&lang=" + lang;
+  }
+
+  // Clear Card onClick
+  var cardNoClr = '';
+
+  function clearCardNo(elem) {
+     if (elem.value.indexOf("*") != -1) {
+        cardNoClr = elem.value;
+        elem.value = '';
+        displayAddrFields();
+     }
+  }
+  function checkClearedCardNo(elem) {
+     if (elem.value.length == 0 || elem.value == cardNoClr) {
+        elem.value = cardNoClr;
+     } else {
+		checkInput('cardno');
+	 }
+  }
+
+  // Display Address if Card Changes
+  function displayAddrFields() {
+     displayRequiredfield('divaddress','address');
+     displayRequiredfield('divcity','city');
+     displayRequiredfield('divstate','state');
+     displayRequiredfield('divzip','zip');
+     displayRequiredfield('divcountry','country');
+  }
+
+  function displayRequiredfield(dName,eName) {
+     var d = document.getElementById(dName);
+     if (!d) return;
+     d.style.display = 'block';
+
+     var e = document.getElementById(eName);
+     if (!e) return;
+     if (eName != 'zip') e.required = true;
+  }
+
+
+var httpRequest;
+
+function FindWallet(element)
+{
+
+  if (window.XMLHttpRequest) {			// Mozilla, Safari, et.
+    httpRequest = new XMLHttpRequest();
+  } else {
+    if (window.ActiveXObject) {			// IE
+      try {
+	httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+      } 
+      catch (ex) {
+	try {
+	  httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+	} 
+        catch (ex2) {}
+      }
+    }
+  }
+  if (!httpRequest) return;
+
+  httpRequest.onreadystatechange = WalletResults;
+  httpRequest.open("POST", emailURL);
+  httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  httpRequest.send("email=" + encodeURIComponent(element.value));
+}
+
+function WalletResults()
+{
+  if (httpRequest.readyState === 4) {
+    if (httpRequest.status === 200) {
+      if (httpRequest.responseText.indexOf("RELOAD") == 0)
+	document.location.reload();
+    } else {
+      alert(httpRequest.responseText);
+    }
+  }
+}
+
+function toggle_rocketpay_info(id) {
+    var e = document.getElementById(id);
+
+    if (e.style.display == 'block')
+        e.style.display = 'none';
+    else
+        e.style.display = 'block';
+}
+
+function toggle_rocketpay_remember() {
+    var e1 = document.getElementById('rocketpay_checkbox'),
+        e2 = document.getElementById('my_rocketpay_button');
+
+    if (e1.checked) {
+        e1.checked = false;
+        e2.src = '/hp/images/rocketpay_unchecked.png';
+    } else {
+        e1.checked = true;
+        e2.src = '/hp/images/rocketpay_checked.png';
+    }
+}
+
+
+
+      var emailURL = "RocketPayEmail.jsp;jsessionid=BFF7804B8F50F662050732C2C581FC75?flag=1837abac932";
+
+
+
+
+
+
+  // Required Field Array
+  var fldAry = ['cvv2','tos','country','cardno','fname','lname'];
+
+</script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-856518-1"></script>
+  
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  
+      gtag('config', 'UA-856518-1', {
+		'linker' : { 'accept_incoming': true, 'domains' : ['nakedsword.com','join.nakedsword.com','rocketgate.com'] }
+	  });
+
+  
+  </script>
+ 
+
+</body>
+</html>

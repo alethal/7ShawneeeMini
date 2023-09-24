@@ -1,0 +1,350 @@
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('https://sellapleasure.com/css-smp/poppins/Poppins-Bold.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('https://sellapleasure.com/css-smp/poppins/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('https://sellapleasure.com/css-smp/poppins/Poppins-Bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('https://sellapleasure.com/css-smp/poppins/Poppins-Bold.woff') format('woff'),
+        /* Modern Browsers */
+        url('https://sellapleasure.com/css-smp/poppins/Poppins-Bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('https://sellapleasure.com/css-smp/poppins/Poppins-Boldsvg#Poppins') format('svg');
+    /* Legacy iOS */
+}
+
+/* poppins */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('https://sellapleasure.com/css-smp/poppins/Poppins-ExtraLight.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('https://sellapleasure.com/css-smp/poppins/Poppins-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('https://sellapleasure.com/css-smp/poppins/Poppins-ExtraLight.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('https://sellapleasure.com/css-smp/poppins/Poppins-ExtraLight.woff') format('woff'),
+        /* Modern Browsers */
+        url('https://sellapleasure.com/css-smp/poppins/Poppins-ExtraLight.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('https://sellapleasure.com/css-smp/poppins/Poppins-ExtraLightsvg#Poppins') format('svg');
+    /* Legacy iOS */
+}
+
+
+.flex-column-sized fla.LoginGetHelp {
+    color: #E7CA64;
+    text-decoration: none;
+}
+
+a.LoginGetHelp:visited {
+    color: #E7CA64;
+    text-decoration: none;
+}
+
+a.LoginGetHelp:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.LoginGetHelp:hover {
+    color: #efefef;
+    text-decoration: none;
+}
+
+.LoginLabel {
+    display: inline-block;
+    width: 25%;
+    padding: 5px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.LoginField {
+    display: inline-block;
+    width: 70%;
+    padding: 5px;
+    text-align: left;
+    font-weight: 600;
+}
+
+
+
+/*@import url("https://sellapleasure.com/css-smp/911porsha-webfont/911porcha.css"); 
+@import url("https://sellapleasure.com/css-smp/aeros-webfont/aeros-stylesheet.css");
+@import url("https://sellapleasure.com/css-smp/micorextendflf-bold-webfont/micorextendflf-bold-webfont-stylesheet.css");*/
+
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');*/
+
+/* ANOR */
+
+
+#intro_features {
+    padding: 10px 0 10px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+
+
+/*
+table {
+  overflow: hidden;
+}
+
+tr:hover {
+  background-color: #ffa;
+}
+
+td, th {
+  position: relative;
+}
+td:hover::after,
+th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #ffa;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+*/
+
+
+
+.e-payout,
+.helpbtn,
+.box-set-options,
+.open-close,
+.start-page-set,
+.bookmark-set {
+    display: none;
+    visibility: hidden;
+}
+
+/*
+.news-floater-wrap .open-close { display: block !important; visibility: visible !important; }
+.news-floater-wrap .open-close span { color: #E7CA64; font-size: 10px;  }
+.news-floater-wrap .open-close span:after { content: ' close';
+display: inline-block;
+visibility: visible;
+ color: #E7CA64;
+   font-size: 10px !important;
+   font-family: 'Poppins',   -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  }
+  .news-floater-wrap .open-close span:hover:after {  color: #fffeec; }
+.news-floater-wrap .open-close span.open-plus { color: #E7CA64; font-size: 8px;  line-height:1; }
+
+.news-floater-wrap .heading .open-close .open-plus, .news-floater-wrap .box .heading .open-close .open-plus, .news-floater-wrap .box .heading .open-close .open-plus, .news-floater-wrap .box .heading .open-close .open-plus {
+    font-size: 10px;
+    line-height: 1;
+    padding: 0 2px;
+}
+
+
+.news-floater-wrap .open-close span.open-plus:after { content: ' open';
+display: inline-block;
+visibility: visible;  color: #E7CA64;
+   font-size: 10px !important;
+   font-family: 'Poppins',   -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  }
+
+.news-floater-wrap .open-close span:hover.open-plus {  }
+.news-floater-wrap .open-close span:hover.open-plus:after { color: #fffeec; }
+*/
+
+#footer .title h5 a.open-close {
+    display: block;
+    visibility: visible;
+}
+
+
+.noteSubject {
+    font-weight: 400 !important;
+}
+
+/* stats page changes  */
+
+.main#statTable .tab-column {
+    text-align: center;
+}
+
+#statTable .tab-column.thisperiodstatsbox3,
+#statTable .tab-column.thisperiodstatsbox4,
+#statTable .tab-column.thisperiodstatsbox5,
+#statTable .tab-column.thisperiodstatsbox6,
+#statTable .tab-column.thisperiodstatsbox7,
+#statTable .tab-column.thisperiodstatsbox10,
+#statTable .tab-column.thisperiodstatsbox12,
+#statTable .tab-column.thisperiodstatsbox14 {
+    display: none;
+    visibility: hidden;
+}
+
+#statTable .col_2,
+#statTable .col_3,
+#statTable .col_4,
+#statTable .col_5,
+#statTable .col_6,
+#statTable .col_9,
+#statTable .col_11,
+#statTable .col_13,
+#statTable .breakdown-column {
+    display: none;
+    visibility: hidden;
+}
+
+#statTable .footer-row .tab-column.footercol3,
+#statTable .footer-row .tab-column.footercol4,
+#statTable .footer-row .tab-column.footercol5,
+#statTable .footer-row .tab-column.footercol6,
+#statTable .footer-row .tab-column.footercol7,
+#statTable .footer-row .tab-column.footercol10,
+#statTable .footer-row .tab-column.footercol12,
+#statTable .footer-row .tab-column.footercol14 {
+    display: none;
+    visibility: hidden;
+}
+
+
+.MessagesPage .left-bar-last {
+    display: none;
+    visibility: hidden;
+}
+
+
+.tools.filter-form .filter-text,
+.tools.filter-form .filter-text-long,
+.tools.filter-form #inline-search-submit {
+    display: none;
+    visibility: hidden;
+}
+
+#tour-options {
+    display: none;
+    visibility: hidden;
+}
+
+
+#stats-filter .block-inner-columns.statspage3 {
+    display: none;
+    visibility: hidden;
+}
+
+#stats-filter .block-inner-columns {
+    float: left;
+    width: 50%;
+    height: 210px;
+}
+
+#stats-filter .block-inner-columns.statspage2 {
+    padding-top: 20px;
+}
+
+#stats-filter .block-inner-columns.statspage2 .filter-form {
+    padding: 0px 0 0 0;
+    margin: 0;
+}
+
+.dashboardrevamp {
+    margin: -85px 0 0 0;
+}
+
+/* remove pasthrough fields */
+
+.switch-srch-after-click {
+    display: none;
+    visibility: hidden;
+}
+
+
+/* affiliatewelcomepagestats */
+
+/* main */
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #efefef;
+    min-width: 100vw !important;
+    font-family: 'Poppins', "Comic Sans MS", "Comic Sans", cursive, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*min-width: 1240px;*/
+    background: #252525;
+    /* font-size: 14px;*/
+    font-weight: 200;
+    line-height: 1.5;
+    /*bg-design.jpg   bg-triple*/
+    background: url(https://sellapleasure.com/img-smp/sella-bg-r2.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-attachment: local;
+
+
+    letter-spacing: .75px;
+    /* All vendor prefixes for font-feature-settings */
+    -moz-font-feature-settings: "kern" 1;
+    -ms-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    -webkit-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+
+img {
+    border-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #E7CA64;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #efefef;
+}
+
+a.news-headline img {
+    display: none;
+    visibility: hidden;
+}
+
+.external-box .ext-title h2 a[href*="signup"],
+.external-box h2.signupheaderexternal {
+    color: #fffeec;
+    font-size: 24px !important;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
+
+.text-block h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    color: #cccccc;
+    font-weight: 200;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    margin: 0;
+    /*font-size: 14px;
+  line-height: 1.22;*/
+    color: #fffeec;
+}
